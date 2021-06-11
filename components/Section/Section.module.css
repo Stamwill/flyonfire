@@ -1,0 +1,17 @@
+.root {
+  position: relative;
+  margin-top: calc(var(--spacing-unit) * 4);
+  margin-bottom: calc(var(--spacing-unit) * 4);
+}
+
+@media (min-width: 600px) {
+  .root {
+    margin-top: calc(var(--spacing-unit) * 6);
+    margin-bottom: calc(var(--spacing-unit) * 6);
+  }
+}
+
+.disableSpacing {
+  margin-top: 0;
+  margin-bottom: 0;
+}

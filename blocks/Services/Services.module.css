@@ -1,0 +1,42 @@
+.root {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  text-align: center;
+  margin-left: 3em;
+  margin-right: 3em;
+}
+
+.imgContainer {
+}
+
+.cardImg {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.titleContainer {
+}
+
+.cardTitle {
+  font-size: 24px;
+  color: #15c7ff;
+}
+
+.infoContainer {
+  width: 400px;
+  text-align: center;
+}
+
+.cardInfo {
+  font-size: 18px;
+  text-align: left;
+}

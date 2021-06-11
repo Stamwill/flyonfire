@@ -1,0 +1,43 @@
+.root {
+  height: 90vh;
+  position: relative;
+}
+
+.headers {
+  color: #15c7ff;
+  text-align: center;
+}
+
+.mainHeading {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+}
+
+.mainTitle {
+  font-size: 64px;
+  margin: 0;
+}
+
+.subTitle {
+  font-size: 36px;
+  margin: 0;
+}
+
+.subHeading {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+}
+
+.name {
+  font-size: 48px;
+  margin: 0;
+}
+
+.ideas {
+  font-size: 24px;
+  margin: 0;
+}

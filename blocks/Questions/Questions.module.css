@@ -1,0 +1,30 @@
+.root {
+  border-radius: 10px;
+  height: 700px;
+  background-color: #3a3535;
+}
+
+.title {
+  position: relative;
+  text-align: center;
+  top: 50px;
+  color: #fff;
+}
+
+.flexContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.questionBlock {
+  width: 400px;
+}
+
+.question {
+  color: #15c7ff;
+}
+
+.answer {
+  color: #fff;
+}
