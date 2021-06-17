@@ -8,8 +8,8 @@ import Questions from '../blocks/Questions'
 import styles from '../styles/Home.module.css'
 import Footer from '../components/Footer'
 
-export default function Home({ heroes, heroNavs, abouts }) {
-
+export default function Home({ heroes, heroNavs, abouts, services }) {
+  console.log(services)
   return (
     <div className={styles.container}>
       <Head>
@@ -22,7 +22,7 @@ export default function Home({ heroes, heroNavs, abouts }) {
       </header>
       <main>
         <About about={abouts}/>
-        <Services />
+        <Services services={services}/>
         <Questions />
       </main>
       <footer>
@@ -72,12 +72,25 @@ export async function getStaticProps() {
     `
   )
 
+  const { services } = await graphcms.request(
+    `
+    query Services() {
+      services {
+        img
+        serviceTitle
+        serviceInfo
+      }
+    }
+    `
+  )
+
 
   return {
     props: {
       heroes,
       heroNavs,
       abouts,
+      services,
     }
   }
 }
