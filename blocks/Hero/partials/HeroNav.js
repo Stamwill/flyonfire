@@ -21,7 +21,8 @@ const HeroNav = React.forwardRef(function HeroNav(props, ref) {
 })
 
 HeroNav.propTypes = {
-  className: PropTypes.string
+  className: PropTypes.string,
+  heroNavs: PropTypes.array,
 }
 
 export default HeroNav
