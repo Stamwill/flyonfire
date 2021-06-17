@@ -24,11 +24,11 @@ const Services = React.forwardRef(function Services(props, ref) {
           </div>
 
           <div className={classes.titleContainer}>
-            <h2 className={classes.cardTitle}>{service.title}</h2>
+            <h2 className={classes.cardTitle}>{service.serviceTitle}</h2>
           </div>
 
           <div className={classes.infoContainer}>
-            <p className={classes.cardInfo}>{service.info}</p>
+            <p className={classes.cardInfo}>{service.serviceInfo}</p>
           </div>
         </div>
       ))}
