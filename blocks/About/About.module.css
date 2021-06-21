@@ -36,3 +36,12 @@
   height: 100%;
   object-fit: cover;
 }
+
+@media screen and (max-width: 1000px) {
+  .gridContainer {
+    display: flex;
+    flex-direction: column;
+    block-size: min-content;
+    margin: 0 1vw;
+  }
+}
