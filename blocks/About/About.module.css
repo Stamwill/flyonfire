@@ -1,10 +1,11 @@
 .root {
   background-color: #3a3535;
   border-radius: 10px;
+  block-size: max-content;
 }
 
 .gridContainer {
-  height: 800px;
+  block-size: 800px;
   display: grid;
   grid-template-columns: 5vw repeat(2, 1fr) 5vw;
   grid-template-rows: 100px repeat(5, 100px);
