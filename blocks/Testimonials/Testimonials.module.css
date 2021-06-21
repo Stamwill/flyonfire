@@ -1,0 +1,44 @@
+.root {
+  background-color: #9652fc;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.refBox {
+  position: relative;
+  margin: 3vh 5vw;
+  width: 500px;
+}
+
+.refImg {
+  height: 300px;
+  width: 100%;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.person {
+  font-size: 1.5vw;
+  color: #fff;
+}
+
+.refText {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  padding: 10px;
+  transition: opacity 1s;
+}
+
+.refBox:hover .refText {
+  visibility: visible;
+  opacity: 1;
+}
+
+.refBox:hover .refImg {
+  opacity: 0.1;
+}
