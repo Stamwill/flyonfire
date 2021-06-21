@@ -33,3 +33,14 @@
 .answer {
   color: #fff;
 }
+
+@media screen and (max-width: 600px) {
+  .gridContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .questionBlock {
+    margin: 0 auto;
+  }
+}
