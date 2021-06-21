@@ -1,6 +1,6 @@
 .root {
   border-radius: 10px;
-  height: 700px;
+  block-size: min-content;
   background-color: #3a3535;
 }
 
@@ -8,20 +8,25 @@
   position: relative;
   text-align: center;
   top: 50px;
+  margin-bottom: 100px;
   color: #fff;
 }
 
-.flexContainer {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(700px, 1fr));
+  align-items: flex-start;
+  justify-items: center;
 }
 
 .questionBlock {
   width: 400px;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .question {
+  font-size: 1rem;
   color: #15c7ff;
 }
 
