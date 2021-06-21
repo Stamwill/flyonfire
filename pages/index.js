@@ -7,6 +7,7 @@ import Services from '../blocks/Services'
 import Questions from '../blocks/Questions'
 import styles from '../styles/Home.module.css'
 import Footer from '../components/Footer'
+import Testimonials from '../blocks/Testimonials'
 
 export default function Home({ heroes, heroNavs, abouts, services, questions, testimonials }) {
 
@@ -24,6 +25,7 @@ export default function Home({ heroes, heroNavs, abouts, services, questions, te
       <main>
         <About about={abouts}/>
         <Services services={services}/>
+        <Testimonials references={testimonials}/>
         <Questions questions={questions}/>
       </main>
       <footer>
@@ -105,6 +107,9 @@ export async function getStaticProps() {
       testimonials {
         reference {
           text
+        }
+        image {
+          url
         }
         person
       }
