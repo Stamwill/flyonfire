@@ -9,7 +9,7 @@ const Services = React.forwardRef(function Services(props, ref) {
   const { className, services, ...other } = props
 
   return (
-    <Section className={classnames(classes.root, className)} ref={ref} {...other}>
+    <div className={classnames(classes.root, className)} ref={ref} {...other}>
       {services.map((service, id) => (
         <div className={classes.card} key={id}>
           <div className={classes.imgContainer}>
@@ -25,7 +25,7 @@ const Services = React.forwardRef(function Services(props, ref) {
           </div>
         </div>
       ))}
-    </Section>
+    </div>
   )
 })
 
