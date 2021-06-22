@@ -6,7 +6,6 @@ import classes from './Testimonials.module.css'
 const Testimonials = React.forwardRef(function Testimonials(props, ref) {
   const { className, references, ...other } = props
 
-  console.log(references[0].image.url)
   return (
     <div className={classnames(classes.root, className)} ref={ref} {...other}>
       {references.map((ref, id) => (
