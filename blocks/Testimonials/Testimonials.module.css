@@ -15,6 +15,7 @@
 }
 
 .refImg {
+  border-radius: 10px;
   height: 300px;
   width: 100%;
   opacity: 1;
