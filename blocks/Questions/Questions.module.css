@@ -1,5 +1,4 @@
 .root {
-  border-radius: 10px;
   block-size: min-content;
   background-color: #3a3535;
 }
@@ -42,5 +41,15 @@
 
   .questionBlock {
     margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .questionBlock {
+    width: 250px;
+  }
+
+  .answer {
+    font-size: 10px;
   }
 }
