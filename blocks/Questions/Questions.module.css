@@ -13,7 +13,7 @@
 
 .gridContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   align-items: flex-start;
   justify-items: center;
 }
@@ -31,6 +31,12 @@
 
 .answer {
   color: #fff;
+}
+
+@media screen and (max-width: 1500px) {
+  .refbox {
+    width: 400px;
+  }
 }
 
 @media screen and (max-width: 600px) {
