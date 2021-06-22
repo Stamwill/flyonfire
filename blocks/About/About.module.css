@@ -28,6 +28,8 @@
 .selfImage {
   grid-column: 2/3;
   grid-row: 2/6;
+  align-self: center;
+  justify-self: center;
 }
 
 .selfImage img {
@@ -37,11 +39,11 @@
   object-fit: cover;
 }
 
-@media screen and (max-width: 1500px) {
+/* @media screen and (max-width: 1500px) {
   .info p {
     font-size: 14px;
   }
-}
+} */
 
 @media screen and (max-width: 1400px) {
   .info p {
