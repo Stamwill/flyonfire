@@ -3,7 +3,6 @@ import classnames from 'clsx'
 import PropTypes from 'prop-types'
 import Section from '../../components/Section'
 import Image from 'next/image'
-import logo from '../../public/flowers.jpg'
 import classes from './Services.module.css'
 
 const Services = React.forwardRef(function Services(props, ref) {
@@ -14,13 +13,7 @@ const Services = React.forwardRef(function Services(props, ref) {
       {services.map((service, id) => (
         <div className={classes.card} key={id}>
           <div className={classes.imgContainer}>
-            {/* <Image
-            className={classes.cardImg}
-            src={service.img}
-            alt="picture of flowers"
-            height={250}
-            width={250}
-          /> */}
+            <img className={classes.serviceImg} src={service.image.url} alt="test" />
           </div>
 
           <div className={classes.titleContainer}>
@@ -37,7 +30,8 @@ const Services = React.forwardRef(function Services(props, ref) {
 })
 
 Services.propTypes = {
-  className: PropTypes.string
+  className: PropTypes.string,
+  services: PropTypes.array,
 }
 
 export default Services

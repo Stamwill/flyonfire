@@ -1,9 +1,9 @@
 .root {
   margin-top: 2em;
-  margin-bottom: 2em;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  background-color: #15c7ff;
 }
 
 .card {
@@ -17,6 +17,9 @@
 .imgContainer {
 }
 
+.serviceImg {
+}
+
 .cardImg {
   height: 150px;
   width: 150px;
@@ -28,7 +31,7 @@
 
 .cardTitle {
   font-size: 24px;
-  color: #15c7ff;
+  color: #fff;
 }
 
 .infoContainer {
