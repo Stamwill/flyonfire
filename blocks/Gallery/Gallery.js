@@ -10,24 +10,14 @@ const Gallery = React.forwardRef(function Gallery(props, ref) {
   console.log('ind', galleries[0].image.url)
   return (
     <div className={classnames(classes.root, className)} ref={ref} {...other}>
-      {/* <Carousel className={classes.gallery} 
-      showThumbs={false}
-      infiniteLoop={true}
-      showIndicators={false}
-      showStatus={false}
-      centerMode={center}
-
-      > */}
       <div className={classes.gallery}>
-
         {galleries.map((gallery, id) => (
           <div className={classes.galleryCard} key={id}>
-            <img className={classes.galleryImg} src={gallery.image.url} alt="test"/>
+            <img className={classes.galleryImg} src={gallery.image.url} alt="test" />
             <p className={classes.galleryText}>{gallery.imageText}</p>
           </div>
         ))}
-      {/* </Carousel> */}
-        </div>
+      </div>
     </div>
   )
 })
