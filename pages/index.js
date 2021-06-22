@@ -10,23 +10,25 @@ import Footer from '../components/Footer'
 import Testimonials from '../blocks/Testimonials'
 
 export default function Home({ heroes, heroNavs, abouts, services, questions, testimonials }) {
-
-  console.log(testimonials)
+  console.log('In index', services[0].image)
   return (
     <div className={styles.container}>
       <Head>
         <title>FlyonFire Creative</title>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@700&display=swap" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@700&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <header>
-        <Hero heroes={heroes} heroNavs={heroNavs}/>
+        <Hero heroes={heroes} heroNavs={heroNavs} />
       </header>
       <main>
-        <About about={abouts}/>
-        <Services services={services}/>
-        <Testimonials references={testimonials}/>
-        <Questions questions={questions}/>
+        <About about={abouts} />
+        <Services services={services} />
+        <Testimonials references={testimonials} />
+        <Questions questions={questions} />
       </main>
       <footer>
         <Footer />
@@ -34,7 +36,6 @@ export default function Home({ heroes, heroNavs, abouts, services, questions, te
     </div>
   )
 }
-
 
 import { GraphQLClient } from 'graphql-request'
 
@@ -51,7 +52,7 @@ export async function getStaticProps() {
         ideasTitle
       }
     },
-    `
+    `,
   )
   const { heroNavs } = await graphcms.request(
     `
@@ -66,7 +67,7 @@ export async function getStaticProps() {
         contact
       }
     }
-    `
+    `,
   )
   const { abouts } = await graphcms.request(
     `
@@ -75,19 +76,21 @@ export async function getStaticProps() {
         textField
       }
     }
-    `
+    `,
   )
 
   const { services } = await graphcms.request(
     `
     query Services() {
       services {
-        img
+        image {
+          url
+        }
         serviceTitle
         serviceInfo
       }
     }
-    `
+    `,
   )
 
   const { questions } = await graphcms.request(
@@ -98,7 +101,7 @@ export async function getStaticProps() {
         answer
       }
     }
-    `
+    `,
   )
 
   const { testimonials } = await graphcms.request(
@@ -113,10 +116,9 @@ export async function getStaticProps() {
         }
         person
       }
-    }  
-    `
+    }
+    `,
   )
-
 
   return {
     props: {
@@ -126,7 +128,6 @@ export async function getStaticProps() {
       services,
       questions,
       testimonials,
-    }
+    },
   }
 }
-
