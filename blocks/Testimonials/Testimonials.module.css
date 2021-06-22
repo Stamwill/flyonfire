@@ -6,9 +6,12 @@
 }
 
 .refBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
   margin: 3vh 5vw;
-  width: 500px;
+  width: 600px;
 }
 
 .refImg {
