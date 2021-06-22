@@ -11,7 +11,7 @@
   justify-content: space-between;
   position: relative;
   margin: 3vh 5vw;
-  width: 600px;
+  width: 400px;
 }
 
 .refImg {
@@ -45,4 +45,10 @@
 
 .refBox:hover .refImg {
   opacity: 0.1;
+}
+
+@media screen and (max-width: 1500px) {
+  .refbox {
+    width: 400px;
+  }
 }
