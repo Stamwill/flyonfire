@@ -30,6 +30,7 @@ export default function Home({
           href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@700&display=swap"
           rel="stylesheet"
         />
+        {/* <link rel="stylesheet" href="carousel.css"/> */}
       </Head>
       <header>
         <Hero heroes={heroes} heroNavs={heroNavs} />
