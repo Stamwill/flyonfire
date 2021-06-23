@@ -6,11 +6,10 @@ import HeroNav from './partials'
 import classes from './Hero.module.css'
 
 const Hero = React.forwardRef(function Hero(props, ref) {
-  const { className, heroes, heroNavs, ...other } = props
+  const { className, heroes, ...other } = props
 
   return (
     <Section className={classnames(classes.root, className)} disableSpacing ref={ref} {...other}>
-      <HeroNav heroNavs={heroNavs}/>
         {heroes.map((hero, id) => (
         <div className={classes.headers} key={id}>
           <div className={classes.mainHeading}>
