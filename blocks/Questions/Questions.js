@@ -8,7 +8,7 @@ const Questions = React.forwardRef(function Questions(props, ref) {
   const { className, questions, ...other } = props
 
   return (
-    <Section className={classnames(classes.root, className)} ref={ref} {...other}>
+    <div className={classnames(classes.root, className)} ref={ref} {...other}>
       <h1 className={classes.title}>Frequently Asked Questions</h1>
 
       <div className={classes.gridContainer}>
@@ -19,7 +19,7 @@ const Questions = React.forwardRef(function Questions(props, ref) {
           </div>
         ))}
       </div>
-    </Section>
+    </div>
   )
 })
 

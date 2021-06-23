@@ -1,6 +1,7 @@
 .root {
   block-size: min-content;
   background-color: #3a3535;
+  padding-top: 20px;
 }
 
 .title {
