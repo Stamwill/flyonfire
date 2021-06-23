@@ -1,18 +1,16 @@
 .root {
   margin-top: 2em;
   background-color: #15c7ff;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-gap: 20px;
+  justify-items: center;
 }
 
 .card {
   width: 400px;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin: 1em 3em;
   text-align: center;
-  margin-left: 3em;
-  margin-right: 3em;
 }
 
 .imgContainer {
@@ -30,7 +28,6 @@
 
 .infoContainer {
   text-align: center;
-  width: 100%;
 }
 
 .cardInfo {
@@ -38,14 +35,26 @@
   letter-spacing: 0.5px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .serviceImg {
-    height: 50px;
-    width: 50px;
+    height: 100px;
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .root {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .serviceImg {
+    height: 70px;
+    width: 70px;
   }
 
   .cardInfo {
-    font-size: 15px;
+    font-size: 12px;
   }
 }
 
