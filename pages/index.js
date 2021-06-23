@@ -8,7 +8,6 @@ import Questions from '../blocks/Questions'
 import styles from '../styles/Home.module.css'
 import Footer from '../components/Footer'
 import Testimonials from '../blocks/Testimonials'
-import Gallery from '../blocks/Gallery'
 
 export default function Home({
   heroes,
@@ -18,9 +17,10 @@ export default function Home({
   questions,
   testimonials,
   galleries,
+  selfImgs,
 })
 {
-  // console.log('index', galleries[0].image.url)
+  console.log('index', selfImgs[0].img.url)
   return (
     <div className={styles.container}>
       <Head>
@@ -36,9 +36,8 @@ export default function Home({
         <Hero heroes={heroes} heroNavs={heroNavs} />
       </header>
       <main>
-        <About about={abouts} />
+        <About about={abouts} selfImgs={selfImgs}/>
         <Services services={services} />
-        <Gallery galleries={galleries}/>
         <Testimonials references={testimonials} />
         <Questions questions={questions} />
       </main>
@@ -145,6 +144,18 @@ export async function getStaticProps() {
     `,
   )
 
+  const { selfImgs } = await graphcms.request(
+    `
+    query selfImgs() {
+      selfImgs {
+        img {
+          url
+        }
+      }
+    }
+    `
+  )
+
   return {
     props: {
       heroes,
@@ -154,6 +165,7 @@ export async function getStaticProps() {
       questions,
       testimonials,
       galleries,
+      selfImgs,
     },
   }
 }
