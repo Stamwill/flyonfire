@@ -7,17 +7,12 @@ import Section from '../../components/Section'
 import classes from './About.module.css'
 
 const About = React.forwardRef(function About(props, ref) {
-  const { className, about, ...other } = props
+  const { className, selfImgs, about, ...other } = props
   return (
     <Section className={classnames(classes.root, className)} ref={ref} {...other}>
       <div className={classes.gridContainer}>
         <div className={classes.selfImage}>
-          <Image
-            src="/vercel.svg"
-            alt="picture of a dragon"
-            width={400}
-            height={400}
-            />
+          <img src={selfImgs[0].img.url} alt="lee" />
         </div>
 
         <div className={classes.info}>
@@ -34,6 +29,7 @@ const About = React.forwardRef(function About(props, ref) {
 About.propTypes = {
   className: PropTypes.string,
   about: PropTypes.array,
+  selfImgs: PropTypes.array,
 }
 
 export default About
