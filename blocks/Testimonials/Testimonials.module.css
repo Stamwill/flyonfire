@@ -1,8 +1,9 @@
 .root {
   background-color: #9652fc;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+  justify-items: center;
 }
 
 .refBox {
@@ -11,25 +12,24 @@
   justify-content: space-between;
   position: relative;
   margin: 3vh 5vw;
-  width: 400px;
+  width: 600px;
 }
 
 .refImg {
   border-radius: 10px;
-  height: 300px;
+  height: 375px;
   width: 100%;
   opacity: 1;
   transition: opacity 0.5s;
 }
 
 .person {
-  font-size: 1.5vw;
   color: #fff;
 }
 
 .refText {
   position: absolute;
-  top: 50%;
+  top: 60%;
   transform: translateY(-50%);
   color: #fff;
   visibility: hidden;
@@ -47,8 +47,40 @@
   opacity: 0.1;
 }
 
-@media screen and (max-width: 1500px) {
-  .refbox {
-    width: 400px;
+@media screen and (max-width: 400px) {
+  /* .refbox {
+    width: 100%;
+  } */
+  .refBox {
+    width: 300px;
+  }
+  .refImg {
+    height: 200px;
+  }
+
+  .refText {
+    font-size: 12px;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .refImg {
+    height: 200px;
+  }
+
+  .refText {
+    font-size: 18px;
+  }
+
+  .root {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* @media screen and (max-width: 1000px) {
+  .refbox {
+    width: 100px;
+  }
+} */
