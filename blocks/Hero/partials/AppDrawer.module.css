@@ -1,0 +1,24 @@
+.root {
+  position: fixed;
+  height: 0%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: orangered;
+  overflow-y: hidden;
+  z-index: 1;
+  transition: 0.2s;
+}
+
+.menuIsOpen {
+  height: 100%;
+}
+
+.navBar {
+  z-index: 2;
+  position: relative;
+  text-align: center;
+  top: 25%;
+  width: 100%;
+  margin-top: 25px;
+}

@@ -2,11 +2,12 @@ import * as React from 'react'
 import classnames from 'clsx'
 import PropTypes from 'prop-types'
 import Image from 'next-images'
+import Hamburger from '../../../components/Hamburger'
 import classes from './HeroNav.module.css'
 
 const HeroNav = React.forwardRef(function HeroNav(props, ref) {
 
-  const { className, heroNavs, ...other } = props
+  const { className, heroNavs, open, toggleMenu, ...other } = props
   return (
     <div className={classnames(classes.root, className)} ref={ref} {...other}>
       {heroNavs.map((nav, id) => (
@@ -19,6 +20,7 @@ const HeroNav = React.forwardRef(function HeroNav(props, ref) {
         <a className={classes.navLink} href="/">{nav.contact}</a>
       </div>
       ))}
+      <Hamburger className={classes.hamburger} open={open} toggleMenu={toggleMenu}/>
     </div>
   )
 })

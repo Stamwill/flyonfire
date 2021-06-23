@@ -35,3 +35,15 @@
   background-position: 0% calc(100% - var(--bottom-distance));
   background-size: 100% var(--border-width);
 }
+
+.hamburger {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+
+@media screen and (max-width: 1000px) {
+  .navLink {
+    display: none;
+  }
+}
