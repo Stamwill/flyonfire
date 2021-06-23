@@ -9,18 +9,17 @@
 }
 
 .logo {
-  height: 7rem;
-  width: 8rem;
+  height: 150px;
+  width: 150px;
   margin-top: 1vh;
   margin-right: auto;
-  margin-left: 3vw;
+  margin-left: 10vw;
 }
 
 .navLink {
   color: #15c7ff;
   margin-right: 3em;
   margin-top: 2em;
-  font-size: 1.5vw;
   text-decoration: none;
   --border-color: #15c7ff;
   --border-width: 1px;
@@ -35,11 +34,4 @@
 .navLink:hover {
   background-position: 0% calc(100% - var(--bottom-distance));
   background-size: 100% var(--border-width);
-}
-
-@media screen and (max-width: 700px) {
-  .logo {
-    height: 4rem;
-    width: 5rem;
-  }
 }
