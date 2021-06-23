@@ -3,9 +3,11 @@ import Image from 'next/image'
 import * as React from 'react'
 import About from '../blocks/About'
 import Hero from '../blocks/Hero'
+import HeroNav from '../blocks/Hero/partials/HeroNav'
 import Services from '../blocks/Services'
 import Questions from '../blocks/Questions'
 import styles from '../styles/Home.module.css'
+import AppDrawer from '../blocks/Hero/partials/AppDrawer'
 import Footer from '../components/Footer'
 import Testimonials from '../blocks/Testimonials'
 
@@ -19,8 +21,15 @@ export default function Home({
   galleries,
   selfImgs,
 })
+
+
 {
-  console.log('index', selfImgs[0].img.url)
+  const [menuIsOpen, setMenuOpen] = React.useState(false)
+  
+  const toggleMenu = () => {
+    setMenuOpen((prevState) => !prevState)
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -33,7 +42,9 @@ export default function Home({
         {/* <link rel="stylesheet" href="carousel.css"/> */}
       </Head>
       <header>
-        <Hero heroes={heroes} heroNavs={heroNavs} />
+        <HeroNav heroNavs={heroNavs} open={menuIsOpen} toggleMenu={toggleMenu} />
+        <AppDrawer heroNavs={heroNavs} open={menuIsOpen} />
+        <Hero heroes={heroes} />
       </header>
       <main>
         <About about={abouts} selfImgs={selfImgs}/>
