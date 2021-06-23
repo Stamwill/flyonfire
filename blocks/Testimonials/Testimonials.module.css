@@ -1,7 +1,7 @@
 .root {
   background-color: #9652fc;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
   justify-items: center;
 }
@@ -64,12 +64,15 @@
 }
 
 @media screen and (max-width: 600px) {
+  .person {
+    font-size: 15px;
+  }
   .refImg {
     height: 200px;
   }
 
   .refText {
-    font-size: 18px;
+    font-size: 12px;
   }
 
   .root {
