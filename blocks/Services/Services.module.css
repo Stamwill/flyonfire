@@ -1,13 +1,13 @@
 .root {
   margin-top: 2em;
+  background-color: #15c7ff;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  /* #93329E */
-  background-color: #15c7ff;
 }
 
 .card {
+  width: 400px;
   margin-top: 1em;
   margin-bottom: 1em;
   text-align: center;
@@ -29,39 +29,76 @@
 }
 
 .infoContainer {
-  width: 400px;
   text-align: center;
+  width: 100%;
 }
 
 .cardInfo {
-  font-size: 18px;
   text-align: left;
+  letter-spacing: 0.5px;
 }
 
-@media screen and (max-width: 1500px) {
-  .cardTitle {
-    font-size: 18px;
+@media screen and (max-width: 600px) {
+  .serviceImg {
+    height: 50px;
+    width: 50px;
   }
 
+  .cardInfo {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .card {
+    width: 450px;
+  }
+}
+/* @media screen and (min-width: 200px) {
+  .cardInfo {
+    font-size: 10px;
+  }
+}
+
+
+@media screen and (min-width: 1000px) {
+  .serviceImg {
+    height: 50px;
+    width: 50px;
+  }
   .cardInfo {
     font-size: 13px;
   }
 
   .infoContainer {
-    width: 250px;
+    width: 210px;
   }
 }
 
-@media screen and (max-width: 1100px) {
-  .cardTitle {
-    font-size: 18px;
+@media screen and (min-width: 1300px) {
+  .card {
+    width: 350px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .card {
+    width: 400px;
+  }
+  .infoContainer {
+    width: 400px;
   }
 
   .cardInfo {
-    font-size: 10px;
+    font-size: 20px;
   }
 
-  .infoContainer {
-    width: 200px;
+  .serviceImg {
+    height: 100px;
+    width: 100px;
   }
-}
+
+  .root {
+    justify-content: space-evenly;
+  }
+} */
