@@ -2,7 +2,6 @@ import * as React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'clsx'
 import Section from '../../components/Section'
-import HeroNav from './partials'
 import classes from './Hero.module.css'
 
 const Hero = React.forwardRef(function Hero(props, ref) {
@@ -30,7 +29,6 @@ const Hero = React.forwardRef(function Hero(props, ref) {
 Hero.propTypes = {
   className: PropTypes.string,
   heroes: PropTypes.array,
-  heroNavs: PropTypes.array,
 }
 
 export default Hero
