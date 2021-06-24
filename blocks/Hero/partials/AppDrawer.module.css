@@ -4,7 +4,7 @@
   width: 100%;
   top: 0;
   left: 0;
-  background-color: orangered;
+  background-color: #fff;
   overflow-y: hidden;
   z-index: 1;
   transition: 0.2s;
@@ -12,13 +12,33 @@
 
 .menuIsOpen {
   height: 100%;
+  opacity: 0.97;
 }
 
 .navBar {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
   z-index: 2;
   position: relative;
-  text-align: center;
   top: 25%;
   width: 100%;
   margin-top: 25px;
+}
+
+.navLink {
+  cursor: pointer;
+  margin: 10px 0;
+  width: 300px;
+  margin: 0 auto;
+  font-size: 20px;
+  clip-path: polygon(7% 0%, 100% 0%, 93% 100%, 0 100%);
+  background: linear-gradient(to left, #fff 50%, #15c7ff 50%) right;
+  background-size: 200%;
+  transition: 0.2s ease-out;
+}
+
+.navLink:hover {
+  color: white;
+  background-position: left;
 }
