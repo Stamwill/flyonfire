@@ -1,8 +1,7 @@
 .root {
-  margin-top: 2em;
   background-color: #15c7ff;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   grid-gap: 20px;
   justify-items: center;
 }
@@ -35,7 +34,16 @@
   letter-spacing: 0.5px;
 }
 
+@media screen and (max-width: 1100px) {
+  .card {
+    width: 450px;
+  }
+}
+
 @media screen and (max-width: 800px) {
+  .root {
+    margin-top: 2em;
+  }
   .serviceImg {
     height: 100px;
     width: 100px;
@@ -57,57 +65,3 @@
     font-size: 12px;
   }
 }
-
-@media screen and (max-width: 1100px) {
-  .card {
-    width: 450px;
-  }
-}
-/* @media screen and (min-width: 200px) {
-  .cardInfo {
-    font-size: 10px;
-  }
-}
-
-
-@media screen and (min-width: 1000px) {
-  .serviceImg {
-    height: 50px;
-    width: 50px;
-  }
-  .cardInfo {
-    font-size: 13px;
-  }
-
-  .infoContainer {
-    width: 210px;
-  }
-}
-
-@media screen and (min-width: 1300px) {
-  .card {
-    width: 350px;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .card {
-    width: 400px;
-  }
-  .infoContainer {
-    width: 400px;
-  }
-
-  .cardInfo {
-    font-size: 20px;
-  }
-
-  .serviceImg {
-    height: 100px;
-    width: 100px;
-  }
-
-  .root {
-    justify-content: space-evenly;
-  }
-} */
