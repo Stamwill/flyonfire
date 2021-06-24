@@ -13,7 +13,7 @@ import Testimonials from '../blocks/Testimonials'
 
 export default function Home({
   heroes,
-  heroNavs,
+  navigations,
   abouts,
   services,
   questions,
@@ -42,8 +42,8 @@ export default function Home({
         {/* <link rel="stylesheet" href="carousel.css"/> */}
       </Head>
       <header>
-        <HeroNav heroNavs={heroNavs} open={menuIsOpen} toggleMenu={toggleMenu} />
-        <AppDrawer heroNavs={heroNavs} open={menuIsOpen} />
+        <HeroNav navigations={navigations} open={menuIsOpen} toggleMenu={toggleMenu} />
+        <AppDrawer navigations={navigations} open={menuIsOpen} />
         <Hero heroes={heroes} />
       </header>
       <main>
@@ -76,17 +76,12 @@ export async function getStaticProps() {
     },
     `,
   )
-  const { heroNavs } = await graphcms.request(
+  const { navigations } = await graphcms.request(
     `
-    query HeroNavs() {
-      heroNavs {
-        logo {
-          url
-        }
-        about
-        projects
-        services
-        contact
+    query Navigations() {
+      navigations {
+        title
+        slug
       }
     }
     `,
@@ -170,7 +165,7 @@ export async function getStaticProps() {
   return {
     props: {
       heroes,
-      heroNavs,
+      navigations,
       abouts,
       services,
       questions,
