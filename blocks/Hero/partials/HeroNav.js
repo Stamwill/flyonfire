@@ -7,27 +7,25 @@ import classes from './HeroNav.module.css'
 
 const HeroNav = React.forwardRef(function HeroNav(props, ref) {
 
-  const { className, heroNavs, open, toggleMenu, ...other } = props
+  const { className, navigations, open, toggleMenu, ...other } = props
   return (
     <div className={classnames(classes.root, className)} ref={ref} {...other}>
-      {heroNavs.map((nav, id) => (
-      <div className={classes.navBar} key={id}>
-        <img className={classes.logo} src={heroNavs[0].logo.url} alt="company logo" />
+      <div className={classes.navBar}>
+      {navigations.map((nav, id) => (
 
-        <a className={classes.navLink} href="/">{nav.about}</a>
-        <a className={classes.navLink} href="/">{nav.projects}</a>
-        <a className={classes.navLink} href="/">{nav.services}</a>
-        <a className={classes.navLink} href="/">{nav.contact}</a>
-      </div>
-      ))}
+          <a className={classes.navLink} href={nav.slug} key={id}>{nav.title}</a>
+
+        ))}
+        </div>
       <Hamburger className={classes.hamburger} open={open} toggleMenu={toggleMenu}/>
     </div>
   )
 })
+{/* <img className={classes.logo} src={navigations[0].logo.url} alt="company logo" /> */}
 
 HeroNav.propTypes = {
   className: PropTypes.string,
-  heroNavs: PropTypes.array,
+  navigations: PropTypes.array,
 }
 
 export default HeroNav
