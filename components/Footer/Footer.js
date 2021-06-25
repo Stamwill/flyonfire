@@ -6,8 +6,6 @@ import classes from './Footer.module.css'
 const Footer = React.forwardRef(function Footer(props, ref) {
   const { className, footers, ...other } = props
 
-  console.log(footers)
-
   return (
     <div className={classnames(classes.root, className)} ref={ref} {...other}>
       {footers.map((item, id) => (
