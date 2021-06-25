@@ -12,12 +12,9 @@
   text-align: center;
 }
 
-.mainHeading {
+.mainHeading,
+.subheading {
   width: 100%;
-  /* position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -40%); */
 }
 
 .mainTitle,
@@ -25,14 +22,6 @@
 .name,
 .ideas {
   margin: 0;
-}
-
-.subHeading {
-  width: 100%;
-  /* position: absolute;
-  top: 90%;
-  left: 50%;
-  transform: translate(-50%, -90%); */
 }
 
 @media screen and (min-width: 200px) {
