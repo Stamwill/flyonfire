@@ -10,13 +10,11 @@ const Footer = React.forwardRef(function Footer(props, ref) {
 
   return (
     <div className={classnames(classes.root, className)} ref={ref} {...other}>
-      {/* {footers.map((item, id) => (
+      {footers.map((item, id) => (
         <div key={id}>
-          <img src={item.logo.url} alt="test" />
           <h5>{item.title}</h5>
         </div>
-      ))} */}
-      <h1>test</h1>
+      ))}
     </div>
   )
 })
