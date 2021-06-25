@@ -20,16 +20,17 @@ export default function Home({
   testimonials,
   galleries,
   selfImgs,
+  footers,
 })
 
 
 {
   const [menuIsOpen, setMenuOpen] = React.useState(false)
-  
+
   const toggleMenu = () => {
     setMenuOpen((prevState) => !prevState)
   }
-
+  console.log(footers)
   return (
     <div className={styles.container}>
       <Head>
@@ -41,19 +42,22 @@ export default function Home({
         />
         {/* <link rel="stylesheet" href="carousel.css"/> */}
       </Head>
+
       <header>
         <HeroNav navigations={navigations} open={menuIsOpen} toggleMenu={toggleMenu} />
         <AppDrawer navigations={navigations} open={menuIsOpen} />
         <Hero heroes={heroes} />
       </header>
+
       <main>
         <About about={abouts} selfImgs={selfImgs}/>
         <Services services={services} />
         <Testimonials references={testimonials} />
         <Questions questions={questions} />
       </main>
+
       <footer>
-        <Footer />
+        <Footer footers={footers}/>
       </footer>
     </div>
   )
@@ -162,6 +166,19 @@ export async function getStaticProps() {
     `
   )
 
+  const { footers } = await graphcms.request(
+    `
+    query footers() {
+      footers {
+        logo {
+          url
+        }
+        title
+      }
+    }
+    `
+  )
+
   return {
     props: {
       heroes,
@@ -172,6 +189,7 @@ export async function getStaticProps() {
       testimonials,
       galleries,
       selfImgs,
+      footers,
     },
   }
 }
