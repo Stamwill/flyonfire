@@ -30,7 +30,10 @@ export default function Home({
   const toggleMenu = () => {
     setMenuOpen((prevState) => !prevState)
   }
-  console.log(footers)
+  
+  const body = document.body
+  console.log(body)
+
   return (
     <div className={styles.container}>
       <Head>
@@ -45,7 +48,7 @@ export default function Home({
 
       <header>
         <HeroNav navigations={navigations} open={menuIsOpen} toggleMenu={toggleMenu} />
-        <AppDrawer navigations={navigations} open={menuIsOpen} />
+        <AppDrawer navigations={navigations} open={menuIsOpen}  />
         <Hero heroes={heroes} />
       </header>
 
