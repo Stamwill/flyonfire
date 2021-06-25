@@ -4,16 +4,20 @@
 }
 
 .headers {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   color: #15c7ff;
   text-align: center;
 }
 
 .mainHeading {
   width: 100%;
-  position: absolute;
+  /* position: absolute;
   top: 40%;
   left: 50%;
-  transform: translate(-50%, -40%);
+  transform: translate(-50%, -40%); */
 }
 
 .mainTitle,
@@ -25,10 +29,10 @@
 
 .subHeading {
   width: 100%;
-  position: absolute;
+  /* position: absolute;
   top: 90%;
   left: 50%;
-  transform: translate(-50%, -90%);
+  transform: translate(-50%, -90%); */
 }
 
 @media screen and (min-width: 200px) {
