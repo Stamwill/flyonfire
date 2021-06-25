@@ -18,6 +18,7 @@
 
 .navLink {
   color: #15c7ff;
+  font-size: 28px;
   margin-right: 3em;
   margin-top: 2em;
   text-decoration: none;
@@ -43,7 +44,7 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .navLink {
+  .navBar {
     display: none;
   }
 }
