@@ -170,9 +170,6 @@ export async function getStaticProps() {
     `
     query footers() {
       footers {
-        logo {
-          url
-        }
         title
       }
     }
