@@ -33,13 +33,6 @@
 }
 
 .answer {
-
-}
-
-@media screen and (max-width: 1500px) {
-  .refbox {
-    width: 400px;
-  }
 }
 
 @media screen and (max-width: 600px) {
@@ -50,6 +43,7 @@
 
   .questionBlock {
     margin: 0 auto;
+    width: 300px;
   }
 }
 
