@@ -7,19 +7,21 @@ import PropTypes from 'prop-types'
 const AppDrawer = React.forwardRef(function AppDrawer(props, ref) {
   const { className, open, toggleMenu, navigations, ...other } = props
 
-  const toggleScroll = (state) => {
-    if (typeof window !== undefined) {
-      const body = document.body
-
-      body.style.overflow = state
+  React.useEffect(() => {
+    const toggleScroll = (state) => {
+      if (typeof window !== undefined) {
+        const body = document.body
+  
+        body.style.overflow = state
+      }
     }
-  }
-
-  if(open) {
-    toggleScroll('hidden')
-  } else {
-    toggleScroll('visible')
-  }
+  
+    if(open) {
+      toggleScroll('hidden')
+    } else {
+      toggleScroll('visible')
+    }
+  })
 
 
   return (
