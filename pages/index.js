@@ -21,18 +21,12 @@ export default function Home({
   galleries,
   selfImgs,
   footers,
-})
-
-
-{
+}) {
   const [menuIsOpen, setMenuOpen] = React.useState(false)
 
   const toggleMenu = () => {
     setMenuOpen((prevState) => !prevState)
   }
-  
-  const body = document.body
-  console.log(body)
 
   return (
     <div className={styles.container}>
@@ -48,19 +42,19 @@ export default function Home({
 
       <header>
         <HeroNav navigations={navigations} open={menuIsOpen} toggleMenu={toggleMenu} />
-        <AppDrawer navigations={navigations} open={menuIsOpen}  />
+        <AppDrawer navigations={navigations} open={menuIsOpen} />
         <Hero heroes={heroes} />
       </header>
 
       <main>
-        <About about={abouts} selfImgs={selfImgs}/>
+        <About about={abouts} selfImgs={selfImgs} />
         <Services services={services} />
         <Testimonials references={testimonials} />
         <Questions questions={questions} />
       </main>
 
       <footer>
-        <Footer footers={footers}/>
+        <Footer footers={footers} />
       </footer>
     </div>
   )
