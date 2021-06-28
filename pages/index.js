@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/image'
+// import Image from 'next/image'
 import * as React from 'react'
 import About from '../blocks/About'
 import Hero from '../blocks/Hero'
