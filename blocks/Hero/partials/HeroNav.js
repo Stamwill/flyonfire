@@ -11,17 +11,21 @@ const HeroNav = React.forwardRef(function HeroNav(props, ref) {
   return (
     <div className={classnames(classes.root, className)} ref={ref} {...other}>
       <div className={classes.navBar}>
-      {navigations.map((nav, id) => (
-
-          <a className={classes.navLink} href={nav.slug} key={id}>{nav.title}</a>
-
+        {navigations.map((nav, id) => (
+          <a
+            className={classes.navLink}
+            href={nav.slug}
+            key={id}
+          >
+            {nav.title}
+          </a>
         ))}
-        </div>
-      <Hamburger className={classes.hamburger} open={open} toggleMenu={toggleMenu}/>
+      </div>
+      <Hamburger className={classes.hamburger} open={open} toggleMenu={toggleMenu} />
     </div>
   )
 })
-{/* <img className={classes.logo} src={navigations[0].logo.url} alt="company logo" /> */}
+{/* <img className={classes.logo} src={navigations[0].logo.url} alt="company logo" /> */ }
 
 HeroNav.propTypes = {
   className: PropTypes.string,
