@@ -43,6 +43,12 @@
   right: 50px;
 }
 
+@media screen and (max-width: 1400px) {
+  .navLink {
+    font-size: 20px;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   .navBar {
     display: none;
