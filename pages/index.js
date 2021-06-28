@@ -37,7 +37,6 @@ export default function Home({
           href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@700&display=swap"
           rel="stylesheet"
         />
-        {/* <link rel="stylesheet" href="carousel.css"/> */}
       </Head>
 
       <header>
@@ -47,14 +46,14 @@ export default function Home({
       </header>
 
       <main>
-        <About about={abouts} selfImgs={selfImgs} />
-        <Services services={services} />
+        <About id="about" about={abouts} selfImgs={selfImgs} />
+        <Services id="services" services={services} />
         <Testimonials references={testimonials} />
         <Questions questions={questions} />
       </main>
 
       <footer>
-        <Footer footers={footers} />
+        <Footer id="footer" footers={footers} />
       </footer>
     </div>
   )
