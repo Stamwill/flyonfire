@@ -1,6 +1,6 @@
 .root {
   block-size: min-content;
-  background-color: #3a3535;
+  background-color: #15c7ff;
   padding-top: 20px;
 }
 
@@ -20,6 +20,8 @@
 }
 
 .questionBlock {
+  display: flex;
+  flex-direction: column;
   width: 400px;
   margin-left: 100px;
   margin-right: 100px;
@@ -27,11 +29,11 @@
 
 .question {
   font-size: 20px;
-  color: #15c7ff;
+  color: #fff;
 }
 
 .answer {
-  color: #fff;
+
 }
 
 @media screen and (max-width: 1500px) {
