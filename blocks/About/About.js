@@ -2,7 +2,6 @@ import * as React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'clsx'
 import Image from 'next/image'
-// import MailBtn from 'components/MailBtn'
 import Section from '../../components/Section'
 import classes from './About.module.css'
 
@@ -21,7 +20,6 @@ const About = React.forwardRef(function About(props, ref) {
         ))}
         </div>
       </div>
-        {/* <MailBtn /> */}
     </Section>
   )
 })
