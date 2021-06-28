@@ -41,7 +41,7 @@ export default function Home({
 
       <header>
         <HeroNav navigations={navigations} open={menuIsOpen} toggleMenu={toggleMenu} />
-        <AppDrawer navigations={navigations} open={menuIsOpen} />
+        <AppDrawer navigations={navigations} open={menuIsOpen} toggleMenu={toggleMenu}/>
         <Hero heroes={heroes} />
       </header>
 
