@@ -1,8 +1,9 @@
 .root {
   background-color: #9652fc;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
   justify-items: center;
 }
 
@@ -12,7 +13,7 @@
   justify-content: space-between;
   position: relative;
   margin: 3vh 5vw;
-  width: 600px;
+  width: 500px;
 }
 
 .refImg {
@@ -29,8 +30,10 @@
 }
 
 .refText {
+  font-size: 20px;
+  letter-spacing: 1px;
   position: absolute;
-  top: 60%;
+  top: 50%;
   transform: translateY(-50%);
   color: #fff;
   visibility: hidden;
