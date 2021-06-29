@@ -5,11 +5,13 @@
 }
 
 .gridContainer {
-  block-size: 800px;
+  /* block-size: min-content;
   display: grid;
   grid-template-columns: 5vw repeat(2, 1fr) 5vw;
   grid-template-rows: 100px repeat(5, 100px);
-  grid-gap: 20px;
+  grid-gap: 20px; */
+  display: flex;
+  justify-content: center;
 }
 
 .info {
@@ -18,9 +20,11 @@
   align-items: stretch;
   color: black;
   margin-left: 30px;
+  width: 1000px;
 }
 
 .info p {
+  font-size: 16px;
   margin: 0;
   margin-bottom: 1em;
 }
@@ -33,9 +37,9 @@
 }
 
 .selfImage img {
-  border-radius: 50%;
-  width: 100%;
+  border-radius: 10px;
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 
