@@ -29,21 +29,3 @@
   width: 100%;
   object-fit: cover;
 }
-
-@media screen and (max-width: 1400px) {
-  .info p {
-    font-size: 12px;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .gridContainer {
-    flex-direction: column;
-    margin: 0 1vw;
-  }
-
-  .info p {
-    font-size: 10px;
-    margin-right: 30px;
-  }
-}
