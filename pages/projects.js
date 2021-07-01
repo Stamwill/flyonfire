@@ -1,6 +1,7 @@
 import * as React from 'react'
 import Head from 'next/head'
 import HeroNav from '../blocks/Hero/partials'
+import AppDrawer from '../blocks/Hero/partials/AppDrawer'
 import Gallery from '../blocks/Gallery'
 import Footer from '../components/Footer'
 
@@ -9,6 +10,13 @@ const Projects = ({
   galleries,
   footers,
 }) => {
+
+  const [menuIsOpen, setMenuOpen] = React.useState(false)
+
+  const toggleMenu = () => {
+    setMenuOpen((prevState) => !prevState)
+  }
+
 return (
   <div>
     <Head>
@@ -21,7 +29,8 @@ return (
     </Head>
 
     <header>
-      <HeroNav navigations={navigations}/>
+      <HeroNav navigations={navigations} open={menuIsOpen} toggleMenu={toggleMenu} />
+      <AppDrawer navigations={navigations} open={menuIsOpen} toggleMenu={toggleMenu}/>
     </header>
 {/*
     <main>
