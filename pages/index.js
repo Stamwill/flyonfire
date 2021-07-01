@@ -18,7 +18,6 @@ export default function Home({
   services,
   questions,
   testimonials,
-  galleries,
   selfImgs,
   footers,
 }) {
@@ -137,19 +136,6 @@ export async function getStaticProps() {
     `,
   )
 
-  const { galleries } = await graphcms.request(
-    `
-    query galleries() {
-        galleries {
-          image {
-            url
-          }
-          imageText
-        }
-      }
-    `,
-  )
-
   const { selfImgs } = await graphcms.request(
     `
     query selfImgs() {
@@ -180,7 +166,6 @@ export async function getStaticProps() {
       services,
       questions,
       testimonials,
-      galleries,
       selfImgs,
       footers,
     },
