@@ -32,10 +32,10 @@ return (
       <HeroNav navigations={navigations} open={menuIsOpen} toggleMenu={toggleMenu} />
       <AppDrawer navigations={navigations} open={menuIsOpen} toggleMenu={toggleMenu}/>
     </header>
-{/*
+
     <main>
-      <Gallery />
-    </main> */}
+      <Gallery galleries={galleries} />
+    </main>
 
     <footer>
       <Footer footers={footers}/>
