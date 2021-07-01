@@ -1,24 +1,14 @@
 .root {
   background-color: #fff;
-  border-radius: 10px;
   block-size: min-content;
 }
 
 .gridContainer {
-  /* block-size: min-content;
-  display: grid;
-  grid-template-columns: 5vw repeat(2, 1fr) 5vw;
-  grid-template-rows: 100px repeat(5, 100px);
-  grid-gap: 20px; */
   display: flex;
   justify-content: center;
 }
 
 .info {
-  grid-column: 3 / 4;
-  grid-row: 2 / 6;
-  align-items: stretch;
-  color: black;
   margin-left: 30px;
   width: 1000px;
 }
@@ -26,12 +16,9 @@
 .info p {
   font-size: 16px;
   margin: 0;
-  margin-bottom: 1em;
 }
 
 .selfImage {
-  grid-column: 2/3;
-  grid-row: 2/6;
   align-self: center;
   justify-self: center;
 }
@@ -51,9 +38,7 @@
 
 @media screen and (max-width: 1000px) {
   .gridContainer {
-    display: flex;
     flex-direction: column;
-    block-size: min-content;
     margin: 0 1vw;
   }
 
