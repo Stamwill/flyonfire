@@ -1,2 +1,6 @@
-const withImages = require("next-images");
-module.exports = withImages();
+module.exports = {
+  webpack: (config, { webpack }) => {
+    config.plugins.push(new webpack.IgnorePlugin(/url-loader/))
+    return config
+  },
+}
