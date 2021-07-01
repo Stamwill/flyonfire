@@ -5,14 +5,8 @@ import Gallery from '../blocks/Gallery'
 import Footer from '../components/Footer'
 
 const Projects = ({
-  heroes,
   navigations,
-  abouts,
-  services,
-  questions,
-  testimonials,
   galleries,
-  selfImgs,
   footers,
 }) => {
 return (
@@ -29,7 +23,7 @@ return (
     <header>
       <HeroNav navigations={navigations}/>
     </header>
-{/* 
+{/*
     <main>
       <Gallery />
     </main> */}
@@ -49,74 +43,12 @@ import { GraphQLClient } from 'graphql-request'
 const graphcms = new GraphQLClient(process.env.GRAPHQL_URL_ENDPOINT)
 
 export async function getStaticProps() {
-  const { heroes } = await graphcms.request(
-    `
-    query Heroes() {
-      heroes {
-        mainTitle
-        subTitle
-        nameTitle
-        ideasTitle
-      }
-    },
-    `,
-  )
   const { navigations } = await graphcms.request(
     `
     query Navigations() {
       navigations {
         title
         slug
-      }
-    }
-    `,
-  )
-  const { abouts } = await graphcms.request(
-    `
-    query Abouts() {
-      abouts {
-        textField
-      }
-    }
-    `,
-  )
-
-  const { services } = await graphcms.request(
-    `
-    query Services() {
-      services {
-        image {
-          url
-        }
-        serviceTitle
-        serviceInfo
-      }
-    }
-    `,
-  )
-
-  const { questions } = await graphcms.request(
-    `
-    query questions() {
-      questions {
-        question
-        answer
-      }
-    }
-    `,
-  )
-
-  const { testimonials } = await graphcms.request(
-    `
-    query testimonials() {
-      testimonials {
-        reference {
-          text
-        }
-        image {
-          url
-        }
-        person
       }
     }
     `,
@@ -135,17 +67,6 @@ export async function getStaticProps() {
     `,
   )
 
-  const { selfImgs } = await graphcms.request(
-    `
-    query selfImgs() {
-      selfImgs {
-        img {
-          url
-        }
-      }
-    }
-    `
-  )
 
   const { footers } = await graphcms.request(
     `
@@ -159,14 +80,8 @@ export async function getStaticProps() {
 
   return {
     props: {
-      heroes,
       navigations,
-      abouts,
-      services,
-      questions,
-      testimonials,
       galleries,
-      selfImgs,
       footers,
     },
   }
