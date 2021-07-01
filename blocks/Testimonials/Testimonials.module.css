@@ -1,10 +1,9 @@
 .root {
   background-color: #9652fc;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 20px;
-  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 20px;
 }
 
 .refBox {
@@ -13,12 +12,12 @@
   justify-content: space-between;
   position: relative;
   margin: 3vh 5vw;
-  width: 500px;
+  width: 300px;
 }
 
 .refImg {
   border-radius: 10px;
-  height: 375px;
+  height: 200px;
   width: 100%;
   opacity: 1;
   transition: opacity 0.5s;
@@ -30,11 +29,11 @@
 }
 
 .refText {
-  font-size: 20px;
+  font-size: 12px;
   letter-spacing: 1px;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translatey(-40%);
   color: #fff;
   visibility: hidden;
   opacity: 0;
@@ -51,43 +50,16 @@
   opacity: 0.1;
 }
 
-@media screen and (max-width: 400px) {
-  /* .refbox {
-    width: 100%;
-  } */
-  .refBox {
-    width: 300px;
-  }
-  .refImg {
-    height: 200px;
-  }
-
-  .refText {
-    font-size: 12px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .person {
-    font-size: 15px;
-  }
-  .refImg {
-    height: 200px;
-  }
-
-  .refText {
-    font-size: 12px;
-  }
-
+@media screen and (min-width: 600px) {
   .root {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    justify-items: center;
+  }
+
+  .refBox {
+    width: 400px;
   }
 }
-
-/* @media screen and (max-width: 1000px) {
-  .refbox {
-    width: 100px;
-  }
-} */
