@@ -1,5 +1,10 @@
 .root {
-  background-color: #fff;
+  background: linear-gradient(
+    90deg,
+    rgba(42, 71, 94, 0.5) 0%,
+    rgba(21, 199, 255, 0.5) 0%,
+    rgba(87, 4, 81, 0.5) 65%
+  );
   block-size: min-content;
 }
 
