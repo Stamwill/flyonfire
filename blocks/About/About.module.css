@@ -10,16 +10,15 @@
   margin: 0 5vw;
 }
 
-.imageContainer {
-  align-self: center;
-  justify-self: center;
+.imgContainer {
+  margin: 0 auto;
 }
 
 .img {
   border-radius: 10px;
   height: 100%;
   width: 100%;
-  object-fit: co;
+  object-fit: cover;
   margin-bottom: 2vh;
 }
 
@@ -39,6 +38,36 @@
   }
 
   .img {
+    height: 400px;
+    width: 400px;
     margin-bottom: 0;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .aboutContainer {
+    display: grid;
+    grid-template-columns: 10vw 1fr 1fr 10vw;
+    grid-template-rows: repeat(3, 200px);
+  }
+
+  .imgContainer {
+    grid-column: 2/3;
+  }
+
+  .img {
+    width: 100%;
+    margin: 0;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .textContainer {
+    grid-column: 3/4;
+  }
+
+  .aboutText {
+    font-size: 12px;
   }
 }
