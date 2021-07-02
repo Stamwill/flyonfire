@@ -1,6 +1,8 @@
 .root {
   block-size: min-content;
   background-color: #15c7ff;
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
@@ -11,18 +13,15 @@
 }
 
 .gridContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-  align-items: flex-start;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
 }
 
 .questionBlock {
   display: flex;
   flex-direction: column;
-  width: 400px;
-  margin-left: 100px;
-  margin-right: 100px;
+  width: 300px;
 }
 
 .question {
@@ -33,3 +32,33 @@
 .answer {
   font-size: 10px;
 }
+
+@media screen and (min-width: 1100px) {
+  .title {
+    font-size: 25px;
+  }
+
+  .gridContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .questionBlock {
+    width: 550px;
+    margin: 0 50px;
+  }
+
+  .question {
+    font-size: 20px;
+  }
+
+  .answer {
+    font-size: 15px;
+  }
+}
+
+/* .gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+} */
