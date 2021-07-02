@@ -8,9 +8,11 @@ import classes from './HeroNav.module.css'
 
 const HeroNav = React.forwardRef(function HeroNav(props, ref) {
 
-  const { className, navigations, open, toggleMenu, ...other } = props
+  const { className, navigations, open, toggleMenu, logo, ...other } = props
+
   return (
     <div className={classnames(classes.root, className)} ref={ref} {...other}>
+      <img className={classes.logo} src={logo[0].logo.url} alt="company logo" />
       <div className={classes.navBar}>
         {navigations.map((nav, id) => (
           <Link href={nav.slug} key={id}>
