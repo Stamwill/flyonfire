@@ -9,6 +9,7 @@ const Projects = ({
   navigations,
   galleries,
   footers,
+  logos,
 }) => {
 
   const [menuIsOpen, setMenuOpen] = React.useState(false)
@@ -29,7 +30,7 @@ return (
     </Head>
 
     <header>
-      <HeroNav navigations={navigations} open={menuIsOpen} toggleMenu={toggleMenu} />
+      <HeroNav navigations={navigations} open={menuIsOpen} toggleMenu={toggleMenu} logo={logos}/>
       <AppDrawer navigations={navigations} open={menuIsOpen} toggleMenu={toggleMenu}/>
     </header>
 
@@ -87,11 +88,24 @@ export async function getStaticProps() {
     `
   )
 
+  const { logos } = await graphcms.request(
+    `
+    query logos() {
+      logos {
+        logo {
+          url
+        }
+      }
+    }
+    `
+  )
+
   return {
     props: {
       navigations,
       galleries,
       footers,
+      logos,
     },
   }
 }
