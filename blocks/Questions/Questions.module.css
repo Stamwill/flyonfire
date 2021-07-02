@@ -6,14 +6,13 @@
 .title {
   position: relative;
   text-align: center;
-  top: 50px;
-  margin-bottom: 100px;
+  margin-top: 0;
   color: #fff;
 }
 
 .gridContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   align-items: flex-start;
   justify-items: center;
 }
@@ -27,31 +26,10 @@
 }
 
 .question {
-  font-size: 20px;
+  font-size: 15px;
   color: #fff;
 }
 
 .answer {
-}
-
-@media screen and (max-width: 600px) {
-  .gridContainer {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .questionBlock {
-    margin: 0 auto;
-    width: 300px;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .questionBlock {
-    width: 250px;
-  }
-
-  .answer {
-    font-size: 10px;
-  }
+  font-size: 10px;
 }
