@@ -3,7 +3,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 20px 20px;
 }
 
 .refBox {
@@ -29,7 +28,7 @@
 }
 
 .refText {
-  font-size: 12px;
+  font-size: 10px;
   letter-spacing: 1px;
   position: absolute;
   top: 50%;
