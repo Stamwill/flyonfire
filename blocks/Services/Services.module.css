@@ -1,9 +1,8 @@
 .root {
   background-color: #15c7ff;
-  padding-top: 20px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card {
@@ -21,6 +20,7 @@
 }
 
 .cardTitle {
+  margin: 0;
   font-size: 25px;
   color: #fff;
 }
@@ -33,4 +33,27 @@
   text-align: left;
   letter-spacing: 0.5px;
   font-size: 12px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1100px) {
+  .root {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 350px;
+  }
+
+  .cardTitle {
+    margin-bottom: 10px;
+  }
+
+  .cardInfo {
+    height: 100px;
+  }
 }
