@@ -20,6 +20,7 @@ export default function Home({
   testimonials,
   selfImgs,
   footers,
+  logos,
 }) {
   const [menuIsOpen, setMenuOpen] = React.useState(false)
 
@@ -39,7 +40,7 @@ export default function Home({
       </Head>
 
       <header>
-        <HeroNav navigations={navigations} open={menuIsOpen} toggleMenu={toggleMenu} />
+        <HeroNav navigations={navigations} open={menuIsOpen} toggleMenu={toggleMenu} logo={logos}/>
         <AppDrawer navigations={navigations} open={menuIsOpen} toggleMenu={toggleMenu}/>
         <Hero heroes={heroes} />
       </header>
@@ -158,6 +159,18 @@ export async function getStaticProps() {
     `
   )
 
+  const { logos } = await graphcms.request(
+    `
+    query logos() {
+      logos {
+        logo {
+          url
+        }
+      }
+    }
+    `
+  )
+
   return {
     props: {
       heroes,
@@ -168,6 +181,7 @@ export async function getStaticProps() {
       testimonials,
       selfImgs,
       footers,
+      logos,
     },
   }
 }
