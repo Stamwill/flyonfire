@@ -1,4 +1,4 @@
-.root {
+/* .root {
   position: relative;
   margin-top: calc(var(--spacing-unit) * 4);
   margin-bottom: calc(var(--spacing-unit) * 4);
@@ -9,6 +9,10 @@
     margin-top: calc(var(--spacing-unit) * 6);
     margin-bottom: calc(var(--spacing-unit) * 6);
   }
+} */
+
+.root {
+  padding: 20px 0;
 }
 
 .disableSpacing {
