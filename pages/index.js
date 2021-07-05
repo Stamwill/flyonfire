@@ -9,6 +9,7 @@ import Questions from '../blocks/Questions'
 import styles from '../styles/Home.module.css'
 import AppDrawer from '../blocks/Hero/partials/AppDrawer'
 import Footer from '../components/Footer'
+import ProjectGallery from '../containers/ProjectGallery'
 import Testimonials from '../blocks/Testimonials'
 
 export default function Home({
@@ -21,12 +22,32 @@ export default function Home({
   selfImgs,
   footers,
   logos,
+  galleries,
+  projectsAnimations,
+  projectsLogos,
 }) {
   const [menuIsOpen, setMenuOpen] = React.useState(false)
 
   const toggleMenu = () => {
     setMenuOpen((prevState) => !prevState)
   }
+
+  const [logosIsOpen, setLogosOpen] = React.useState(false)
+  const [animationsIsOpen, setAnimationsOpen] = React.useState(false)
+
+  const testFuncOne = () => {
+    setLogosOpen(prevstate => !prevstate)
+    setAnimationsOpen(false)
+    console.log('logos', logosIsOpen)
+    console.log('animations',animationsIsOpen)
+  }
+
+  const testFuncTwo = () => {
+    setLogosOpen(false)
+    setAnimationsOpen(false)
+  }
+
+  console.log(navigations[0])
 
   return (
     <div className={styles.container}>
@@ -39,18 +60,30 @@ export default function Home({
         />
       </Head>
 
-      <header>
-        <HeroNav navigations={navigations} open={menuIsOpen} toggleMenu={toggleMenu} logo={logos}/>
-        <AppDrawer navigations={navigations} open={menuIsOpen} toggleMenu={toggleMenu}/>
-        <Hero heroes={heroes} />
-      </header>
+      <HeroNav navigations={navigations} open={menuIsOpen} toggleMenu={toggleMenu} logo={logos}/>
+      <AppDrawer navigations={navigations} open={menuIsOpen} toggleMenu={toggleMenu}/>
 
+      {logosIsOpen ? (
+        <ProjectGallery 
+          galleries={galleries} 
+          projectsAnimations={projectsAnimations} 
+          projectsLogos={projectsLogos}
+          testFuncTwo={testFuncTwo}
+        />
+      ) : (
+        <Hero heroes={heroes}/>
+      )}
+      <header>
+        {/* <Hero heroes={heroes} /> */}
+        <p onClick={testFuncOne}>click me</p>
+      </header>
+{/* 
       <main>
         <About id="about" about={abouts} selfImgs={selfImgs} />
         <Services id="services" services={services} />
         <Testimonials references={testimonials} />
         <Questions questions={questions} />
-      </main>
+      </main> */}
 
       <footer>
         <Footer id="footer" footers={footers} />
@@ -171,6 +204,46 @@ export async function getStaticProps() {
     `
   )
 
+  
+  const { galleries } = await graphcms.request(
+    `
+    query galleries() {
+        galleries {
+          image {
+            url
+          }
+          imageText
+        }
+      }
+    `,
+  )
+
+  const { projectsAnimations } = await graphcms.request (
+    `
+    query projectsAnimations() {
+      projectsAnimations {
+        logo {
+          url
+        }
+        text
+      }
+    }
+    `
+  )
+
+  const { projectsLogos } = await graphcms.request (
+    `
+    query projectsLogos() {
+      projectsLogos {
+        logo {
+          url
+        }
+        text
+      }
+    }
+    `
+  )
+
   return {
     props: {
       heroes,
@@ -182,6 +255,9 @@ export async function getStaticProps() {
       selfImgs,
       footers,
       logos,
+      galleries,
+      projectsAnimations,
+      projectsLogos,
     },
   }
 }
