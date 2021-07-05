@@ -1,0 +1,36 @@
+.root {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 15vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+}
+
+.img {
+  width: 100%;
+  height: 250px;
+}
+
+.link {
+  cursor: pointer;
+  width: 300px;
+  text-align: center;
+  margin: 20px auto;
+  font-size: 18px;
+  clip-path: polygon(7% 0%, 100% 0%, 93% 100%, 0 100%);
+  background: linear-gradient(to left, #fff 50%, #15c7ff 50%) right;
+  background-size: 200%;
+  transition: 0.2s ease-out;
+  color: black;
+}
+
+.link:hover {
+  color: white;
+  background-position: left;
+}
