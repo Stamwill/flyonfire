@@ -22,7 +22,6 @@ const ProjectGallery = React.forwardRef(function ProjectGallery(props, ref) {
   if (logosIsOpen) {
     return (<div>
       <Gallery galleries={galleries}/>
-      <p onClick={testFuncTwo}>Go back</p>
     </div>
     )
   } else {
@@ -41,8 +40,6 @@ const ProjectGallery = React.forwardRef(function ProjectGallery(props, ref) {
           <a className={classes.link} > {link.text} </a>
         </div>
       ))}
-
-      <p onClick={testFuncTwo}>Go back</p>
     </div>
   )
 }
