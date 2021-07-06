@@ -8,7 +8,7 @@ import classes from './HeroNav.module.css'
 
 const HeroNav = React.forwardRef(function HeroNav(props, ref) {
 
-  const { className, navigations, open, toggleMenu, logo, testFuncTwo, testFuncOne, clickTest, ...other } = props
+  const { className, navigations, open, toggleMenu, logo, ...other } = props
 
 
   return (
@@ -21,7 +21,6 @@ const HeroNav = React.forwardRef(function HeroNav(props, ref) {
               className={classes.navLink}
               href={nav.slug}
               key={id}
-              onClick={clickTest}
             >
               {nav.title}
             </a>
