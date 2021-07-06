@@ -38,16 +38,23 @@ export default function Home({
   const testFuncOne = () => {
     setLogosOpen(prevstate => !prevstate)
     setAnimationsOpen(false)
-    console.log('logos', logosIsOpen)
-    console.log('animations',animationsIsOpen)
+    console.log('testFuncOne')
   }
 
   const testFuncTwo = () => {
     setLogosOpen(false)
     setAnimationsOpen(false)
+    console.log('testFuncTwo')
   }
 
-  console.log(navigations[0])
+  const clickTest = (event) => {
+    if (event.target.text === "Projects") {
+      console.log(event.target.text)
+      testFuncOne()
+    } else if (event.target.text !== "Projects") {
+      testFuncTwo()
+    }
+  }
 
   return (
     <div className={styles.container}>
@@ -60,34 +67,34 @@ export default function Home({
         />
       </Head>
 
-      <HeroNav navigations={navigations} open={menuIsOpen} toggleMenu={toggleMenu} logo={logos}/>
+      <HeroNav navigations={navigations} open={menuIsOpen}
+      toggleMenu={toggleMenu} logo={logos} testFuncTwo={testFuncTwo} testFuncOne={testFuncOne} clickTest={clickTest}  />
       <AppDrawer navigations={navigations} open={menuIsOpen} toggleMenu={toggleMenu}/>
 
       {logosIsOpen ? (
-        <ProjectGallery 
-          galleries={galleries} 
-          projectsAnimations={projectsAnimations} 
+        <ProjectGallery
+          galleries={galleries}
+          projectsAnimations={projectsAnimations}
           projectsLogos={projectsLogos}
           testFuncTwo={testFuncTwo}
         />
-      ) : (
-        <Hero heroes={heroes}/>
-      )}
+      ) : (<>
       <header>
-        {/* <Hero heroes={heroes} /> */}
-        <p onClick={testFuncOne}>click me</p>
+        <Hero heroes={heroes}/>
       </header>
-{/* 
+
       <main>
         <About id="about" about={abouts} selfImgs={selfImgs} />
         <Services id="services" services={services} />
         <Testimonials references={testimonials} />
         <Questions questions={questions} />
-      </main> */}
+      </main>
 
       <footer>
         <Footer id="footer" footers={footers} />
       </footer>
+      </>
+      )}
     </div>
   )
 }
@@ -204,7 +211,7 @@ export async function getStaticProps() {
     `
   )
 
-  
+
   const { galleries } = await graphcms.request(
     `
     query galleries() {
