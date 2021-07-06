@@ -32,30 +32,6 @@ export default function Home({
     setMenuOpen((prevState) => !prevState)
   }
 
-  const [logosIsOpen, setLogosOpen] = React.useState(false)
-  const [animationsIsOpen, setAnimationsOpen] = React.useState(false)
-
-  const testFuncOne = () => {
-    setLogosOpen(prevstate => !prevstate)
-    setAnimationsOpen(false)
-    console.log('testFuncOne')
-  }
-
-  const testFuncTwo = () => {
-    setLogosOpen(false)
-    setAnimationsOpen(false)
-    console.log('testFuncTwo')
-  }
-
-  const clickTest = (event) => {
-    if (event.target.text === "Projects") {
-      console.log(event.target.text)
-      testFuncOne()
-    } else if (event.target.text !== "Projects") {
-      testFuncTwo()
-    }
-  }
-
   return (
     <div className={styles.container}>
       <Head>
@@ -67,19 +43,15 @@ export default function Home({
         />
       </Head>
 
-      <HeroNav navigations={navigations} open={menuIsOpen}
-      toggleMenu={toggleMenu} logo={logos} testFuncTwo={testFuncTwo} testFuncOne={testFuncOne} clickTest={clickTest}  />
-      <AppDrawer navigations={navigations} open={menuIsOpen} toggleMenu={toggleMenu}/>
 
-      {logosIsOpen ? (
-        <ProjectGallery
+        {/* <ProjectGallery
           galleries={galleries}
           projectsAnimations={projectsAnimations}
           projectsLogos={projectsLogos}
-          testFuncTwo={testFuncTwo}
-        />
-      ) : (<>
+        /> */}
       <header>
+        <HeroNav navigations={navigations} open={menuIsOpen} toggleMenu={toggleMenu} logo={logos} />
+        <AppDrawer navigations={navigations} open={menuIsOpen} toggleMenu={toggleMenu}/>
         <Hero heroes={heroes}/>
       </header>
 
@@ -93,8 +65,6 @@ export default function Home({
       <footer>
         <Footer id="footer" footers={footers} />
       </footer>
-      </>
-      )}
     </div>
   )
 }
