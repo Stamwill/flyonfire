@@ -5,26 +5,8 @@ import Gallery from '../../blocks/Gallery'
 
 
 const ProjectGallery = React.forwardRef(function ProjectGallery(props, ref) {
-  const { className, projectsAnimations, projectsLogos, galleries, testFuncTwo, ...other} = props
+  const { className, projectsAnimations, projectsLogos, galleries, ...other} = props
 
-  const [logosIsOpen, setLogosOpen] = React.useState(false)
-  const [animationsIsOpen, setAnimationsOpen] = React.useState(false)
-
-  const testFuncOne = () => {
-    setLogosOpen(prevstate => !prevstate)
-    setAnimationsOpen(false)
-    console.log('logos', logosIsOpen)
-    console.log('animations',animationsIsOpen)
-  }
-
-
-
-  if (logosIsOpen) {
-    return (<div>
-      <Gallery galleries={galleries}/>
-    </div>
-    )
-  } else {
   return (
     <div className={classnames(classes.root, className)} ref={ref} {...other}>
       {projectsLogos.map((link, id) => (
@@ -42,6 +24,5 @@ const ProjectGallery = React.forwardRef(function ProjectGallery(props, ref) {
       ))}
     </div>
   )
-}
 })
 export default ProjectGallery
