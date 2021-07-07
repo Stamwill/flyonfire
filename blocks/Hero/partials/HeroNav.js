@@ -2,7 +2,6 @@ import * as React from 'react'
 import classnames from 'clsx'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
-import Image from 'next-images'
 import Hamburger from '../../../components/Hamburger'
 import classes from './HeroNav.module.css'
 
@@ -16,7 +15,7 @@ const HeroNav = React.forwardRef(function HeroNav(props, ref) {
       <img className={classes.logo} src={logo[0].logo.url} alt="company logo" />
       <div className={classes.navBar}>
         {navigations.map((nav, id) => (
-          <Link href={nav.slug} key={id}>
+          <Link href={nav.slug} key={id} passHref>
             <a
               className={classes.navLink}
               href={nav.slug}
