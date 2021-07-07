@@ -1,16 +1,10 @@
 import Head from 'next/head'
-// import Image from 'next/image'
 import * as React from 'react'
-import About from '../blocks/About'
-import Hero from '../blocks/Hero'
 import HeroNav from '../blocks/Hero/partials/HeroNav'
-import Services from '../blocks/Services'
-import Questions from '../blocks/Questions'
 import styles from '../styles/Home.module.css'
 import AppDrawer from '../blocks/Hero/partials/AppDrawer'
 import Footer from '../components/Footer'
 import ProjectGallery from '../containers/ProjectGallery'
-import Testimonials from '../blocks/Testimonials'
 
 export default function Home({
   navigations,
@@ -41,7 +35,6 @@ export default function Home({
       <header>
         <HeroNav navigations={navigations} open={menuIsOpen} toggleMenu={toggleMenu} logo={logos} />
         <AppDrawer navigations={navigations} open={menuIsOpen} toggleMenu={toggleMenu}/>
-        <Hero heroes={heroes}/>
       </header>
 
       <main>
@@ -49,7 +42,7 @@ export default function Home({
           galleries={galleries}
           projectsAnimations={projectsAnimations}
           projectsLogos={projectsLogos}
-        /> 
+        />
       </main>
 
       <footer>
