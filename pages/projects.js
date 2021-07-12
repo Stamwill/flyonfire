@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import * as React from 'react'
 import HeroNav from '../blocks/Hero/partials/HeroNav'
-import styles from '../styles/Home.module.css'
 import AppDrawer from '../blocks/Hero/partials/AppDrawer'
 import Footer from '../components/Footer'
 import ProjectGallery from '../containers/ProjectGallery'
@@ -112,6 +111,7 @@ export async function getStaticProps() {
         logo {
           url
         }
+        slug
         text
       }
     }
