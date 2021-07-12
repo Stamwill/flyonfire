@@ -4,11 +4,17 @@ import classnames from 'clsx'
 import classes from './videoGallery.module.css'
 
 const VideoGallery = React.forwardRef(function VideoGallery(props, ref) {
-  const { className, ...other } = props
+  const { className, videos, ...other } = props
 
   return (
     <div className={classnames(classes.root, className)} ref={ref} {...other}>
-      <h1>test</h1>
+      {videos.map((video, id) => (
+        <div className={classes.videoContainer} key={id}>
+          <video className={classes.video} controls>
+            <source src={video.video.url} type="video/mp4" />
+          </video>
+        </div>
+      ))}
     </div>
   )
 })
