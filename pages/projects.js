@@ -5,6 +5,7 @@ import styles from '../styles/Home.module.css'
 import AppDrawer from '../blocks/Hero/partials/AppDrawer'
 import Footer from '../components/Footer'
 import ProjectGallery from '../containers/ProjectGallery'
+import classes from '../styles/projects.module.css'
 
 export default function Home({
   navigations,
@@ -21,7 +22,7 @@ export default function Home({
   }
 
   return (
-    <div className={styles.container}>
+    <div className={classes.root}>
       <Head>
         <title>FlyonFire Creative</title>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -37,7 +38,7 @@ export default function Home({
         <AppDrawer navigations={navigations} open={menuIsOpen} toggleMenu={toggleMenu}/>
       </header>
 
-      <main>
+      <main className={classes.main}>
          <ProjectGallery
           galleries={galleries}
           projectsAnimations={projectsAnimations}
@@ -45,7 +46,7 @@ export default function Home({
         />
       </main>
 
-      <footer>
+      <footer className={classes.footer}>
         <Footer id="footer" footers={footers} />
       </footer>
     </div>
