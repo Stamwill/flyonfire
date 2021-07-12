@@ -12,7 +12,7 @@ export default function Home({
   navigations,
   footers,
   logos,
-  galleries,
+  videos,
 }) {
   const [menuIsOpen, setMenuOpen] = React.useState(false)
 
@@ -38,7 +38,7 @@ export default function Home({
       </header>
 
       <main className={classes.main}>
-        <Gallery galleries={galleries} />
+        <VideoGallery videos={videos} />
       </main>
 
       <footer className={classes.footer}>
@@ -49,7 +49,6 @@ export default function Home({
 }
 
 import { GraphQLClient } from 'graphql-request'
-import Gallery from '../blocks/Gallery'
 
 const graphcms = new GraphQLClient(process.env.GRAPHQL_URL_ENDPOINT)
 
@@ -101,12 +100,25 @@ export async function getStaticProps() {
     `,
   )
 
+  const { videos } = await graphcms.request(
+    `
+    query Videos() {
+      videos {
+        video {
+          url
+        }
+      }
+    }
+    `
+  )
+
   return {
     props: {
       navigations,
       footers,
       logos,
       galleries,
+      videos,
     },
   }
 }
