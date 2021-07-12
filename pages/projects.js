@@ -125,6 +125,7 @@ export async function getStaticProps() {
         logo {
           url
         }
+        slug
         text
       }
     }
