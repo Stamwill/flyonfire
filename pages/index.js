@@ -21,6 +21,7 @@ export default function Home({
   footers,
   logos,
 }) {
+
   const [menuIsOpen, setMenuOpen] = React.useState(false)
 
   const toggleMenu = () => {
