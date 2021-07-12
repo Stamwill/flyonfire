@@ -11,7 +11,6 @@ export default function Home({
   footers,
   logos,
   galleries,
-  projectsLogos,
 }) {
   const [menuIsOpen, setMenuOpen] = React.useState(false)
 
@@ -37,7 +36,6 @@ export default function Home({
       </header>
 
       <main className={classes.main}>
-        <h1>testiiing</h1>
         <Gallery galleries={galleries}/>
       </main>
 
@@ -100,26 +98,12 @@ export async function getStaticProps() {
     `,
   )
 
-  const { projectsLogos } = await graphcms.request (
-    `
-    query projectsLogos() {
-      projectsLogos {
-        logo {
-          url
-        }
-        text
-      }
-    }
-    `
-  )
-
   return {
     props: {
       navigations,
       footers,
       logos,
       galleries,
-      projectsLogos,
     },
   }
 }
