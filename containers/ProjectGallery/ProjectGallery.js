@@ -6,11 +6,13 @@ import classes from './ProjectGallery.module.css'
 const ProjectGallery = React.forwardRef(function ProjectGallery(props, ref) {
   const { className, projectsAnimations, projectsLogos, galleries, ...other} = props
 
+
   return (
     <div className={classnames(classes.root, className)} ref={ref} {...other}>
       {projectsLogos.map((link, id) => (
         <div className={classes.container} key={id}>
-          <img className={classes.img} src={link.logo.url} alt="test"/>
+          <img className={classes.img} src={link.logo.url} alt="logo container img"/>
+
           <Link href={link.slug} >
             <a className={classes.link}> {link.text} </a>
           </Link>
@@ -19,8 +21,11 @@ const ProjectGallery = React.forwardRef(function ProjectGallery(props, ref) {
 
       {projectsAnimations.map((link, id) => (
         <div className={classes.container} key={id}>
-          <img className={classes.img} src={link.logo.url} alt="test"/>
-          <a className={classes.link} > {link.text} </a>
+          <img className={classes.img} src={link.logo.url} alt="animations container img"/>
+
+          <Link href={link.slug} >
+            <a className={classes.link} > {link.text} </a>
+          </Link>
         </div>
       ))}
     </div>
