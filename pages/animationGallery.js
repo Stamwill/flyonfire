@@ -107,6 +107,7 @@ export async function getStaticProps() {
         video {
           url
         }
+        text
       }
     }
     `
