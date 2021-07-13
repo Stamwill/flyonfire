@@ -5,7 +5,7 @@
 .gallery {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 20px;
   margin: 20px 20px;
 }
@@ -14,8 +14,10 @@
   position: relative;
 }
 .galleryImg {
+  vertical-align: middle;
+  border-radius: 10px;
   position: relative;
-  height: 200px;
+  height: 300px;
   width: 100%;
   opacity: 1;
   transition: opacity 0.2s;
