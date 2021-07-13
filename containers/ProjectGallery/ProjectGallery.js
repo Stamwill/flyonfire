@@ -11,7 +11,9 @@ const ProjectGallery = React.forwardRef(function ProjectGallery(props, ref) {
     <div className={classnames(classes.root, className)} ref={ref} {...other}>
       {projectsLogos.map((link, id) => (
         <div className={classes.container} key={id}>
-          <img className={classes.img} src={link.logo.url} alt="logo container img"/>
+          <Link href={link.slug}>
+            <img className={classes.img} src={link.logo.url} alt="logo container img"/>
+          </Link>
 
           <Link href={link.slug} >
             <a className={classes.link}> {link.text} </a>
@@ -21,7 +23,9 @@ const ProjectGallery = React.forwardRef(function ProjectGallery(props, ref) {
 
       {projectsAnimations.map((link, id) => (
         <div className={classes.container} key={id}>
-          <img className={classes.img} src={link.logo.url} alt="animations container img"/>
+          <Link href={link.slug}>
+            <img className={classes.img} src={link.logo.url} alt="animations container img"/>
+          </Link>
 
           <Link href={link.slug} >
             <a className={classes.link} > {link.text} </a>
