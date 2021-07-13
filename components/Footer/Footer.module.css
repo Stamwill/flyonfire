@@ -5,7 +5,10 @@
   align-items: center;
   flex-wrap: wrap;
   height: 80px;
-  margin-bottom: 100px;
   background: #fff;
   color: #15c7ff;
+}
+
+.title {
+  margin: 0;
 }
