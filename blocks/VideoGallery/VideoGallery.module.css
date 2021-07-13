@@ -6,11 +6,18 @@
 }
 
 .videoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 400px;
   margin: 30px 10px;
 }
 
 .video {
-  width: 100%;
+  margin: 0 auto;
   height: 200px;
+}
+
+.text {
+  margin: 5px 20px;
 }

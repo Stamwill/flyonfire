@@ -13,6 +13,7 @@ const VideoGallery = React.forwardRef(function VideoGallery(props, ref) {
           <video className={classes.video} controls>
             <source src={video.video.url} type="video/mp4" />
           </video>
+          <p className={classes.text}>{video.text}</p>
         </div>
       ))}
     </div>
