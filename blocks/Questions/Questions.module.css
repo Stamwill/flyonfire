@@ -45,7 +45,7 @@
   }
 
   .questionBlock {
-    width: 550px;
+    width: 450px;
     margin: 0 50px;
   }
 
@@ -55,6 +55,12 @@
 
   .answer {
     font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .questionBlock {
+    width: 550px;
   }
 }
 
