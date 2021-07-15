@@ -48,7 +48,7 @@
   .aboutContainer {
     display: grid;
     grid-template-columns: 10vw 1fr 1fr 10vw;
-    grid-template-rows: repeat(3, 200px);
+    grid-template-rows: repeat(2, 250px);
   }
 
   .imgContainer {
@@ -71,5 +71,11 @@
   .aboutText {
     font-size: 12px;
     margin: 0 0 10px 0;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .aboutText {
+    font-size: 15px;
   }
 }
