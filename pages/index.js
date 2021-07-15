@@ -28,10 +28,13 @@ export default function Home({
     setMenuOpen((prevState) => !prevState)
   }
 
+  console.log('H', heroes)
+
   return (
     <div className={styles.container}>
       <Head>
         <title>FlyonFire Creative</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@700&display=swap"
@@ -72,6 +75,9 @@ export async function getStaticProps() {
         subTitle
         nameTitle
         ideasTitle
+        heroImg {
+          url
+        }
       }
     },
     `,
