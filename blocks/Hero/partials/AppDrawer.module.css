@@ -6,8 +6,8 @@
   left: 0;
   background-color: #fff;
   overflow-y: hidden;
-  z-index: 1;
-  transition: 0.2s;
+  z-index: 10;
+  transition: 0.4s;
 }
 
 .menuIsOpen {
@@ -35,7 +35,7 @@
   clip-path: polygon(7% 0%, 100% 0%, 93% 100%, 0 100%);
   background: linear-gradient(to left, #fff 50%, #15c7ff 50%) right;
   background-size: 200%;
-  transition: 0.2s ease-out;
+  transition: 0.4s ease-out;
 }
 
 .navLink:hover {
