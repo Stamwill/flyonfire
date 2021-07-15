@@ -42,15 +42,22 @@
 
 @media screen and (min-width: 1000px) {
   .navBar {
+    height: 100px;
     margin-bottom: 0;
     display: flex;
     justify-content: flex-end;
     align-items: center;
   }
 
+  .navLink {
+    font-size: 20px;
+    margin-top: 0;
+  }
+
   .logo {
     width: 120px;
     height: 80px;
     left: 50px;
+    top: 10px;
   }
 }

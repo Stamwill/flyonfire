@@ -6,9 +6,7 @@ import Hamburger from '../../../components/Hamburger'
 import classes from './HeroNav.module.css'
 
 const HeroNav = React.forwardRef(function HeroNav(props, ref) {
-
   const { className, navigations, open, toggleMenu, logo, ...other } = props
-
 
   return (
     <div className={classnames(classes.root, className)} ref={ref} {...other}>
