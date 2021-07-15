@@ -7,8 +7,8 @@
 
 .logo {
   position: absolute;
-  height: 70px;
-  width: 90px;
+  height: 60px;
+  width: 80px;
   top: 20px;
   left: 20px;
 }
@@ -42,7 +42,7 @@
 
 @media screen and (min-width: 1000px) {
   .navBar {
-    height: 100px;
+    height: 70px;
     margin-bottom: 0;
     display: flex;
     justify-content: flex-end;
@@ -55,9 +55,9 @@
   }
 
   .logo {
-    width: 120px;
-    height: 80px;
-    left: 50px;
-    top: 10px;
+    width: 80px;
+    height: 60px;
+    left: 100px;
+    top: 5px;
   }
 }
