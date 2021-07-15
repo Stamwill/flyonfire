@@ -1,5 +1,4 @@
 .root {
-  background-color: #9652fc;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -16,24 +15,25 @@
 
 .refImg {
   border-radius: 10px;
-  height: 200px;
+  height: 300px;
   width: 100%;
+  object-fit: cover;
   opacity: 1;
   transition: opacity 0.5s;
 }
 
 .person {
   margin: 0;
-  color: #fff;
+  color: black;
 }
 
 .refText {
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 1px;
   position: absolute;
   top: 50%;
   transform: translatey(-40%);
-  color: #fff;
+  color: black;
   visibility: hidden;
   opacity: 0;
   padding: 10px;
@@ -60,5 +60,11 @@
 
   .refBox {
     width: 400px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .refText {
+    font-size: 15px;
   }
 }
