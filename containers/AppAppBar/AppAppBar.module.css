@@ -1,0 +1,11 @@
+.root {
+  transition: transform 0.25s 0.15s ease-out;
+}
+
+.hidden {
+  transform: translate3d(0, -100%, 0);
+}
+
+.searchIsOpen {
+  padding-right: 17px;
+}
