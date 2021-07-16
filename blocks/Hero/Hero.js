@@ -7,7 +7,6 @@ import classes from './Hero.module.css'
 const Hero = React.forwardRef(function Hero(props, ref) {
   const { className, heroes, ...other } = props
 
-  console.log(heroes)
   return (
     <Section className={classnames(classes.root, className)} disableSpacing ref={ref} {...other}>
     <img className={classes.heroImg} src={heroes[0].heroImg.url} />
