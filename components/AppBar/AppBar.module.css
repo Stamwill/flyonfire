@@ -1,0 +1,17 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  z-index: 999;
+  flex-shrink: 0;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+}
