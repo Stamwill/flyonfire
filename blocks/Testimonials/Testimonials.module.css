@@ -1,5 +1,47 @@
 .root {
   display: flex;
+  flex-direction: column;
+  margin: 30px 30px;
+}
+
+.refBox {
+  display: flex;
+  justify-content: space-between;
+  background-color: #15c7ff;
+  padding: 25px 200px;
+  clip-path: polygon(10% 5%, 100% 5%, 90% 100%, 0% 100%);
+  margin: 20px 0;
+}
+
+.refImg {
+  height: 100px;
+  width: 100px;
+  margin-right: 20px;
+  border-radius: 10px;
+  object-fit: cover;
+  align-self: flex-start;
+}
+
+.refTextBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.person {
+  font-size: 10px;
+}
+
+.refText {
+  font-size: 9px;
+}
+
+@media screen and (min-width: 1100px) {
+}
+
+/* old Version  */
+
+/* .root {
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -24,7 +66,7 @@
 
 .person {
   margin: 0;
-  color: black;
+  color: #15c7ff;
 }
 
 .refText {
@@ -67,4 +109,4 @@
   .refText {
     font-size: 15px;
   }
-}
+} */

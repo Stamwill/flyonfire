@@ -11,9 +11,11 @@ const Testimonials = React.forwardRef(function Testimonials(props, ref) {
     <Section className={classnames(classes.root, className)} ref={ref} {...other}>
       {references.map((ref, id) => (
         <div className={classes.refBox} key={id}>
-          <h2 className={classes.person}>{ref.person}</h2>
           <img className={classes.refImg} src={ref.image.url} alt="text" />
-          <p className={classes.refText}>{ref.reference.text}</p>
+          <div className={classes.refTextBox}>
+            <h2 className={classes.person}>{ref.person}</h2>
+            <p className={classes.refText}>{ref.reference.text}</p>
+          </div>
         </div>
       ))}
     </Section>
