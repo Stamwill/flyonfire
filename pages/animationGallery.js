@@ -1,10 +1,9 @@
 import Head from 'next/head'
 import * as React from 'react'
 import HeroNav from '../blocks/Hero/partials/HeroNav'
-import styles from '../styles/Home.module.css'
 import AppDrawer from '../blocks/Hero/partials/AppDrawer'
+import AppAppBar from '../containers/AppAppBar/AppAppBar'
 import Footer from '../components/Footer'
-import ProjectGallery from '../containers/ProjectGallery'
 import VideoGallery from '../blocks/VideoGallery'
 import classes from '../styles/animationGallery.module.css'
 
@@ -32,10 +31,10 @@ export default function Home({
       </Head>
 
 
-      <header>
+      <AppAppBar open={menuIsOpen}>
         <HeroNav navigations={navigations} open={menuIsOpen} toggleMenu={toggleMenu} logo={logos} />
         <AppDrawer navigations={navigations} open={menuIsOpen} toggleMenu={toggleMenu}/>
-      </header>
+      </AppAppBar>
 
       <main className={classes.main}>
         <VideoGallery videos={videos} />
