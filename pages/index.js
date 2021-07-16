@@ -8,6 +8,7 @@ import Questions from '../blocks/Questions'
 import styles from '../styles/Home.module.css'
 import AppDrawer from '../blocks/Hero/partials/AppDrawer'
 import Footer from '../components/Footer'
+import AppAppBar from '../containers/AppAppBar/AppAppBar'
 import Testimonials from '../blocks/Testimonials'
 
 export default function Home({
@@ -28,8 +29,6 @@ export default function Home({
     setMenuOpen((prevState) => !prevState)
   }
 
-  console.log('H', heroes)
-
   return (
     <div className={styles.container}>
       <Head>
@@ -42,13 +41,13 @@ export default function Home({
         />
       </Head>
 
-      <header>
+      <AppAppBar open={menuIsOpen}>
         <HeroNav navigations={navigations} open={menuIsOpen} toggleMenu={toggleMenu} logo={logos} />
         <AppDrawer navigations={navigations} open={menuIsOpen} toggleMenu={toggleMenu}/>
-        <Hero heroes={heroes}/>
-      </header>
+      </AppAppBar>
 
       <main>
+        <Hero heroes={heroes}/>
         <About id="about" about={abouts} selfImgs={selfImgs} />
         <Services id="services" services={services} />
         <Testimonials references={testimonials} />
