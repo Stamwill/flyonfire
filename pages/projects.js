@@ -4,6 +4,7 @@ import HeroNav from '../blocks/Hero/partials/HeroNav'
 import AppDrawer from '../blocks/Hero/partials/AppDrawer'
 import Footer from '../components/Footer'
 import ProjectGallery from '../containers/ProjectGallery'
+import AppAppBar from '../containers/AppAppBar/AppAppBar'
 import classes from '../styles/projects.module.css'
 
 export default function Home({
@@ -32,10 +33,10 @@ export default function Home({
       </Head>
 
 
-      <header>
+      <AppAppBar open={menuIsOpen}>
         <HeroNav navigations={navigations} open={menuIsOpen} toggleMenu={toggleMenu} logo={logos} />
         <AppDrawer navigations={navigations} open={menuIsOpen} toggleMenu={toggleMenu}/>
-      </header>
+      </AppAppBar>
 
       <main className={classes.main}>
          <ProjectGallery
