@@ -38,7 +38,7 @@ const AppAppBar = React.forwardRef(function AppAppBar(props, ref) {
         {
           [classes.hidden]: isHidden,
         },
-        { [classes.searchIsOpen]: open },
+        { [classes.menuIsOpen]: open },
         className,
       )}
       ref={handleRef}
