@@ -5,7 +5,3 @@
 .hidden {
   transform: translate3d(0, -100%, 0);
 }
-
-.menuIsOpen {
-  padding-right: 17px;
-}
