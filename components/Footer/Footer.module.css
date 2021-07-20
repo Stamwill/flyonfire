@@ -5,10 +5,17 @@
   align-items: center;
   flex-wrap: wrap;
   height: 80px;
-  background: #fff;
+  /* background: #fff; */
+  border-top: 1px solid #15c7ff;
   color: #15c7ff;
 }
 
 .title {
   margin: 0;
+}
+
+@media screen and (min-width: 1100px) {
+  .root {
+    height: 50px;
+  }
 }
