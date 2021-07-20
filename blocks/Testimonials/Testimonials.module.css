@@ -6,7 +6,9 @@
 
 .refBox {
   display: flex;
+  flex-direction: column;
   background-color: #15c7ff;
+  padding: 20px;
   /* background-color: rgba(21, 199, 255, 0.2); */
   /* padding: 25px 200px; */
   /* clip-path: polygon(0% 5%, 100% 5%, 90% 100%, 0% 100%); */
@@ -14,12 +16,11 @@
 }
 
 .refImg {
-  height: 100px;
-  width: 100px;
-  margin-right: 20px;
+  height: 150px;
+  width: 250px;
   border-radius: 10px;
   object-fit: cover;
-  align-self: flex-start;
+  align-self: center;
 }
 
 .refTextBox {
@@ -29,10 +30,18 @@
 
 .person {
   font-size: 12px;
+  text-align: center;
 }
 
 .refText {
   font-size: 12px;
+}
+
+@media screen and (min-width: 500px) {
+  .refText {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (min-width: 1100px) {
@@ -46,22 +55,27 @@
     padding-right: 100px;
     padding-left: 20px;
     align-items: center;
+    flex-direction: row;
   }
 
   .refImg {
     height: 150px;
     width: 150px;
+    margin-right: 20px;
     align-self: center;
   }
 
   .person {
+    margin-top: 0;
     font-size: 15px;
+    align-self: flex-start;
     color: white;
   }
 
   .refText {
     margin-top: 0;
     font-size: 13px;
+    width: 100%;
   }
 }
 
