@@ -7,10 +7,11 @@
 }
 
 .logo {
+  /* display: none; */
   position: absolute;
-  height: 60px;
-  width: 80px;
-  top: 20px;
+  height: 50px;
+  width: 70px;
+  top: 5px;
   left: 20px;
 }
 
@@ -35,13 +36,20 @@
   background-size: 100% var(--border-width);
 }
 
+.hamburgerContainer {
+  margin-top: 60px;
+}
+
 .hamburger {
   position: absolute;
-  top: 40px;
-  right: 30px;
+  right: 50px;
 }
 
 @media screen and (min-width: 1000px) {
+  .root {
+    height: 75px;
+  }
+
   .navBar {
     height: 70px;
     margin-bottom: 0;
