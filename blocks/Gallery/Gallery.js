@@ -10,7 +10,7 @@ const Gallery = React.forwardRef(function Gallery(props, ref) {
       <div className={classes.gallery}>
         {galleries.map((gallery, id) => (
           <div className={classes.galleryCard} key={id}>
-            <img className={classes.galleryImg} src={gallery.image.url} alt="test" />
+            <img className={classes.galleryImg} src={gallery.image.url} alt="Logo Project" />
             <p className={classes.galleryText}>{gallery.imageText}</p>
           </div>
         ))}
