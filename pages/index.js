@@ -34,6 +34,7 @@ export default function Home({
       <Head>
         <title>FlyonFire Creative</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
+        <meta name="description" content="Graphic and Animation Designer Lee Piechowicz, bringing your ideas to life" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@700&display=swap"
@@ -76,6 +77,8 @@ export async function getStaticProps() {
         ideasTitle
         heroImg {
           url
+          width
+          height
         }
       }
     },
