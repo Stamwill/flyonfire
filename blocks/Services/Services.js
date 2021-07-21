@@ -13,7 +13,7 @@ const Services = React.forwardRef(function Services(props, ref) {
       {services.map((service, id) => (
         <div className={classes.card} key={id}>
           <div className={classes.imgContainer}>
-            <img className={classes.serviceImg} src={service.image.url} alt="test" />
+            <img className={classes.serviceImg} src={service.image.url} alt="Service Image" />
           </div>
 
           <div className={classes.titleContainer}>
