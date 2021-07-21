@@ -11,7 +11,7 @@ const About = React.forwardRef(function About(props, ref) {
     <Section className={classnames(classes.root, className)} ref={ref} {...other}>
       <div className={classes.aboutContainer}>
         <div className={classes.imgContainer}>
-          <img className={classes.img} src={selfImgs[0].img.url} alt="lee" />
+          <img className={classes.img} src={selfImgs[0].img.url} alt="Picture of Lee the Designer" />
         </div>
 
         <div className={classes.textContainer}>
