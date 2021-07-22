@@ -75,7 +75,7 @@ export async function getStaticProps() {
         subTitle
         nameTitle
         ideasTitle
-        heroImg {
+        image {
           url
           width
           height
@@ -110,6 +110,8 @@ export async function getStaticProps() {
       services {
         image {
           url
+          width
+          height
         }
         serviceTitle
         serviceInfo
@@ -138,6 +140,8 @@ export async function getStaticProps() {
         }
         image {
           url
+          width
+          height
         }
         person
       }
@@ -151,6 +155,8 @@ export async function getStaticProps() {
       selfImgs {
         img {
           url
+          width
+          height
         }
       }
     }
@@ -173,6 +179,8 @@ export async function getStaticProps() {
       logos {
         logo {
           url
+          width
+          height
         }
       }
     }
