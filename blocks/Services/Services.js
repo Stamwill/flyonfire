@@ -12,8 +12,13 @@ const Services = React.forwardRef(function Services(props, ref) {
     <Section className={classnames(classes.root, className)} ref={ref} {...other}>
       {services.map((service, id) => (
         <div className={classes.card} key={id}>
-          <div className={classes.imgContainer}>
-            <img className={classes.serviceImg} src={service.image.url} alt="Service Image" />
+          <div className={classes.test}>
+            <Image 
+              src={service.image.url}
+              height={100}
+              width={100}
+              alt="Service logo"
+            />
           </div>
 
           <div className={classes.titleContainer}>
