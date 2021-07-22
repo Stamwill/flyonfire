@@ -1,32 +1,24 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'clsx'
-import Image from 'next-images'
+import Image from 'next/image'
 import Section from '../../components/Section'
 import classes from './Hero.module.css'
 
 const Hero = React.forwardRef(function Hero(props, ref) {
   const { className, heroes, ...other } = props
 
-
-  // console.log(Object.values(heroes[0].heroImg))
-  console.log(heroes)
-  console.log(heroes[0])
-  console.log(heroes[0].heroImg)
-  // console.log(heroes[0].heroImg)
-  
-
   return (
     <Section className={classnames(classes.root, className)} disableSpacing ref={ref} {...other}>
-    {/* <img className={classes.heroImg} src={heroes[0].heroImg.url} alt="Hero Background Image"/> */}
         {heroes.map((hero, id) => (
           <div className={classes.headers} key={id}>
-          {/* <Image 
-          src={heroes[0].heroImg.url}
-          width={heroes[0].heroImg.width}
-          height={heroes[0].heroImg.height}
-          alt="Hero Background Image"
-          />   */}
+            <div className={classes.heroImg}>
+              <Image 
+                src={heroes[0].image.url}
+                layout='fill'
+                alt="Hero background image"
+              />  
+            </div>
           <div className={classes.mainHeading}>
             <h1 className={classes.mainTitle}>{hero.mainTitle}</h1>
             <h2 className={classes.subTitle}>{hero.subTitle}</h2>
