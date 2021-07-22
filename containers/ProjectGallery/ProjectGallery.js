@@ -1,5 +1,6 @@
 import * as React from 'react'
 import classnames from 'clsx'
+import Image from 'next/image'
 import Link from 'next/link'
 import classes from './ProjectGallery.module.css'
 
@@ -12,7 +13,14 @@ const ProjectGallery = React.forwardRef(function ProjectGallery(props, ref) {
       {projectsLogos.map((link, id) => (
         <div className={classes.container} key={id}>
           <Link href={link.slug}>
-            <img className={classes.img} src={link.logo.url} alt="logo container img"/>
+            <div className={classes.img}>
+              <Image 
+                src={link.logo.url}
+                layout='fill'      
+                alt="logo gallery logo"
+              />
+            </div>
+         
           </Link>
 
           <Link href={link.slug} >
@@ -24,7 +32,13 @@ const ProjectGallery = React.forwardRef(function ProjectGallery(props, ref) {
       {projectsAnimations.map((link, id) => (
         <div className={classes.container} key={id}>
           <Link href={link.slug}>
-            <img className={classes.img} src={link.logo.url} alt="animations container img"/>
+            <div className={classes.img}>
+            <Image 
+              src={link.logo.url}
+              layout='fill'      
+              alt="Animation gallery logo"
+            />
+            </div>
           </Link>
 
           <Link href={link.slug} >
