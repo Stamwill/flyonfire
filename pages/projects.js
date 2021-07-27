@@ -25,6 +25,8 @@ export default function Home({
     <div className={classes.root}>
       <Head>
         <title>FlyonFire Creative</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
+        <meta name="description" content="Gallery for professional Animations and Logos" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@700&display=swap"
