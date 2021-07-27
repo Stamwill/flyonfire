@@ -14,6 +14,9 @@ const Hero = React.forwardRef(function Hero(props, ref) {
           <div className={classes.headers} key={id}>
             <div className={classes.heroImg}>
               <Image 
+                rel='preload'
+                as="image"
+                href={heroes[0].image.url}
                 src={heroes[0].image.url}
                 layout='fill'
                 alt="Hero background image"
