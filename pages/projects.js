@@ -11,16 +11,14 @@ import classes from '../styles/projects.module.css'
 
 const graphcms = new GraphQLClient(process.env.GRAPHQL_URL_ENDPOINT)
 export async function getServerSideProps() {
-  const { galleries, projectsAnimations, projectsLogos } = await graphcms.request(
-    `
-    query galleries() {
-        galleries {
-          image {
-            url
-          }
-          imageText
+  const { galleries, projectsAnimations, projectsLogos } = await graphcms.request(`
+    query {
+      galleries {
+        image {
+          url
         }
-      },
+        imageText
+        }
 
       projectsAnimations {
         logo {
@@ -37,7 +35,7 @@ export async function getServerSideProps() {
         slug
         text
       }
-
+    }
     `,
   )
   return {
