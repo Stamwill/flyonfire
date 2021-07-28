@@ -5,6 +5,7 @@
   align-items: center;
   flex-wrap: wrap;
   height: 80px;
+  margin-top: auto;
   padding-left: 20px;
   font-size: 10px;
   border-top: 1px solid #15c7ff;
