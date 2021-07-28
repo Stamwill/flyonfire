@@ -9,6 +9,46 @@ import ProjectGallery from '../containers/ProjectGallery'
 import AppAppBar from '../containers/AppAppBar/AppAppBar'
 import classes from '../styles/projects.module.css'
 
+const graphcms = new GraphQLClient(process.env.GRAPHQL_URL_ENDPOINT)
+export async function getServerSideProps() {
+  const { galleries, projectsAnimations, projectsLogos } = await graphcms.request(
+    `
+    query galleries() {
+        galleries {
+          image {
+            url
+          }
+          imageText
+        }
+      },
+
+      projectsAnimations {
+        logo {
+          url
+        }
+        slug
+        text
+      },
+
+      projectsLogos {
+        logo {
+          url
+        }
+        slug
+        text
+      }
+
+    `,
+  )
+  return {
+    props: {
+      galleries,
+      projectsAnimations,
+      projectsLogos,
+    },
+  }
+}
+
 export default function Home({
   galleries,
   projectsAnimations,
@@ -49,63 +89,8 @@ export default function Home({
           projectsLogos={projectsLogos}
         />
       </main>
-
-      <footer className={classes.footer}>
-        <Footer id="footer" footers={footer} />
-      </footer>
+      
+      <Footer id="footer" footers={footer} />
     </div>
   )
-}
-
-const graphcms = new GraphQLClient(process.env.GRAPHQL_URL_ENDPOINT)
-
-export async function getServerSideProps() {
-  const { galleries } = await graphcms.request(
-    `
-    query galleries() {
-        galleries {
-          image {
-            url
-          }
-          imageText
-        }
-      }
-    `,
-  )
-
-  const { projectsAnimations } = await graphcms.request (
-    `
-    query projectsAnimations() {
-      projectsAnimations {
-        logo {
-          url
-        }
-        slug
-        text
-      }
-    }
-    `
-  )
-
-  const { projectsLogos } = await graphcms.request (
-    `
-    query projectsLogos() {
-      projectsLogos {
-        logo {
-          url
-        }
-        slug
-        text
-      }
-    }
-    `
-  )
-
-  return {
-    props: {
-      galleries,
-      projectsAnimations,
-      projectsLogos,
-    },
-  }
 }
