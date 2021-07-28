@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import * as React from 'react'
+import { GraphQLClient } from 'graphql-request'
+import {useGlobal} from '../api/GlobalContext'
 import About from '../blocks/About'
 import Hero from '../blocks/Hero'
 import HeroNav from '../blocks/Hero/partials/HeroNav'
@@ -10,15 +12,10 @@ import AppDrawer from '../blocks/Hero/partials/AppDrawer'
 import Footer from '../components/Footer'
 import AppAppBar from '../containers/AppAppBar/AppAppBar'
 import Testimonials from '../blocks/Testimonials'
-import {useGlobal} from '../api/GlobalContext'
-// import client from './api/graphcms'
-
-import { GraphQLClient } from 'graphql-request'
 
 const graphcms = new GraphQLClient(process.env.GRAPHQL_URL_ENDPOINT)
-
 export async function getServerSideProps() {
-  const { heroes } = await graphcms.request(`
+  const { heroes, abouts, services, questions, testimonials, selfImgs } = await graphcms.request(`
   query {
     heroes {
       mainTitle
@@ -30,80 +27,49 @@ export async function getServerSideProps() {
         width
         height
       }
+    },
+
+    abouts {
+      textField
+    },
+
+    services {
+      image {
+        url
+        width
+        height
+      }
+      serviceTitle
+      serviceInfo
+    },
+
+    questions {
+      question
+      answer
+    },
+
+    testimonials {
+      reference {
+        text
+      }
+      image {
+        url
+        width
+        height
+      }
+      person
+    },
+
+    selfImgs {
+      img {
+        url
+        width
+        height
+      }
     }
-  },
+  }
 `
 )
-
-  const { abouts } = await graphcms.request(
-    `
-    query Abouts() {
-      abouts {
-        textField
-      }
-    }
-    `,
-  )
-
-  const { services } = await graphcms.request(
-    `
-    query Services() {
-      services {
-        image {
-          url
-          width
-          height
-        }
-        serviceTitle
-        serviceInfo
-      }
-    }
-    `,
-  )
-
-  const { questions } = await graphcms.request(
-    `
-    query questions() {
-      questions {
-        question
-        answer
-      }
-    }
-    `,
-  )
-
-  const { testimonials } = await graphcms.request(
-    `
-    query testimonials() {
-      testimonials {
-        reference {
-          text
-        }
-        image {
-          url
-          width
-          height
-        }
-        person
-      }
-    }
-    `,
-  )
-
-  const { selfImgs } = await graphcms.request(
-    `
-    query selfImgs() {
-      selfImgs {
-        img {
-          url
-          width
-          height
-        }
-      }
-    }
-    `
-  )
-
   return {
     props: {
       heroes,
@@ -156,4 +122,3 @@ export default function Home({
     </div>
   )
 }
-
