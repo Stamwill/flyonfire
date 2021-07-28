@@ -9,6 +9,28 @@ import Footer from '../components/Footer'
 import VideoGallery from '../blocks/VideoGallery'
 import classes from '../styles/animationGallery.module.css'
 
+const graphcms = new GraphQLClient(process.env.GRAPHQL_URL_ENDPOINT)
+export async function getServerSideProps() {
+  const { videos } = await graphcms.request(
+    `
+    query Videos() {
+      videos {
+        video {
+          url
+        }
+        text
+      }
+    }
+    `
+  )
+
+  return {
+    props: {
+      videos,
+    },
+  }
+}
+
 export default function Home({ videos }) {
   const [menuIsOpen, setMenuOpen] = React.useState(false)
 
@@ -31,7 +53,6 @@ export default function Home({ videos }) {
         />
       </Head>
 
-
       <AppAppBar open={menuIsOpen}>
         <HeroNav navigations={menu} open={menuIsOpen} toggleMenu={toggleMenu} logo={logos} />
         <AppDrawer navigations={menu} open={menuIsOpen} toggleMenu={toggleMenu}/>
@@ -41,32 +62,7 @@ export default function Home({ videos }) {
         <VideoGallery videos={videos} />
       </main>
 
-      <footer className={classes.footer}>
-        <Footer id="footer" footers={footer} />
-      </footer>
+      <Footer id="footer" footers={footer} />
     </div>
   )
-}
-
-const graphcms = new GraphQLClient(process.env.GRAPHQL_URL_ENDPOINT)
-
-export async function getServerSideProps() {
-  const { videos } = await graphcms.request(
-    `
-    query Videos() {
-      videos {
-        video {
-          url
-        }
-        text
-      }
-    }
-    `
-  )
-
-  return {
-    props: {
-      videos,
-    },
-  }
 }
