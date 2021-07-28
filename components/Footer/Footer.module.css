@@ -1,11 +1,12 @@
 .root {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   align-items: center;
   flex-wrap: wrap;
   height: 80px;
-  /* background: #fff; */
+  padding-left: 20px;
+  font-size: 10px;
   border-top: 1px solid #15c7ff;
   color: #15c7ff;
 }
@@ -16,6 +17,12 @@
 
 @media screen and (min-width: 1100px) {
   .root {
+    padding-left: 0;
+    justify-content: space-evenly;
     height: 50px;
+  }
+
+  .title {
+    font-size: 15px;
   }
 }
