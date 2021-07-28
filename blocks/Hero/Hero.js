@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Section from '../../components/Section'
 import classes from './Hero.module.css'
 
+
 const Hero = React.forwardRef(function Hero(props, ref) {
   const { className, heroes, ...other } = props
 
@@ -15,8 +16,6 @@ const Hero = React.forwardRef(function Hero(props, ref) {
             <div className={classes.heroImg}>
               <Image 
                 rel='preload'
-                as="image"
-                href={heroes[0].image.url}
                 src={heroes[0].image.url}
                 layout='fill'
                 alt="Hero background image"
@@ -39,7 +38,7 @@ const Hero = React.forwardRef(function Hero(props, ref) {
 
 Hero.propTypes = {
   className: PropTypes.string,
-  heroes: PropTypes.array,
+
 }
 
 export default Hero
