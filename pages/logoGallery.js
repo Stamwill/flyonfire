@@ -10,7 +10,26 @@ import Gallery from '../blocks/Gallery'
 import classes from '../styles/projects.module.css'
 
 const graphcms = new GraphQLClient(process.env.GRAPHQL_URL_ENDPOINT)
+export async function getServerSideProps() {
+  const { galleries } = await graphcms.request(
+    `
+    query galleries() {
+        galleries {
+          image {
+            url
+          }
+          imageText
+        }
+      }
+    `,
+  )
 
+  return {
+    props: {
+      galleries,
+    },
+  }
+}
 
 export default function Home({ galleries }) {
   const [menuIsOpen, setMenuOpen] = React.useState(false)
@@ -44,31 +63,7 @@ export default function Home({ galleries }) {
         <Gallery galleries={galleries}/>
       </main>
 
-      <footer className={classes.footer}>
-        <Footer id="footer" footers={footer} />
-      </footer>
+      <Footer id="footer" footers={footer} />
     </div>
   )
-}
-
-
-export async function getServerSideProps() {
-  const { galleries } = await graphcms.request(
-    `
-    query galleries() {
-        galleries {
-          image {
-            url
-          }
-          imageText
-        }
-      }
-    `,
-  )
-
-  return {
-    props: {
-      galleries,
-    },
-  }
 }
