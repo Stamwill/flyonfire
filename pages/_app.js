@@ -23,10 +23,12 @@ MyApp.getInitialProps = async (props) => {
         navigations {
           title
           slug
-        }
+        },
+
         footers {
           title
-        }
+        },
+
         logos {
           logo {
             url
