@@ -14,12 +14,13 @@ const Hero = React.forwardRef(function Hero(props, ref) {
         {heroes.map((hero, id) => (
           <div className={classes.headers} key={id}>
             <div className={classes.heroImg}>
-              <Image 
+              <Image
                 rel='preload'
+                as='image'
                 src={heroes[0].image.url}
                 layout='fill'
                 alt="Hero background image"
-              />  
+              />
             </div>
           <div className={classes.mainHeading}>
             <h1 className={classes.mainTitle}>{hero.mainTitle}</h1>
