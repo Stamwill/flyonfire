@@ -5,7 +5,6 @@ import Image from 'next/image'
 import Section from '../../components/Section'
 import classes from './Hero.module.css'
 
-
 const Hero = React.forwardRef(function Hero(props, ref) {
   const { className, heroes, ...other } = props
 
