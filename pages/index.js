@@ -117,7 +117,7 @@ export default function Home({
         <Testimonials references={testimonials} />
         <Questions questions={questions} />
       </main>
-     
+
       <Footer id="footer" footers={footer} />
     </div>
   )
