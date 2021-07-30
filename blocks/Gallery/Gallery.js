@@ -13,7 +13,6 @@ function Gallery(props) {
             <div className={classes.galleryImg}>
             <Image 
               src={gallery.image.url}
-              rel="preload"
               layout='fill'      
               alt="logo of project"
             />
