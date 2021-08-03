@@ -61,7 +61,7 @@ MyApp.getInitialProps = async (props) => {
 
 MyApp.propTypes = {
   cmsProps: PropTypes.object,
-  Component: PropTypes.object,
+  Component: PropTypes.func,
   pageProps: PropTypes.object
 }
 
