@@ -23,7 +23,6 @@ const AppDrawer = React.forwardRef(function AppDrawer(props, ref) {
     }
   })
 
-
   return (
     <div className={classnames(classes.root, { [classes.menuIsOpen]: open }, className)} ref={ref} {...other}>
       <div className={classes.navBar}>
