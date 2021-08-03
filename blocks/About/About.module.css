@@ -24,11 +24,12 @@
 }
 
 .textContainer {
+  margin-left: 10px;
 }
 
 .aboutText {
   font-size: 12px;
-  margin: 10px 0;
+  margin: 10px 20px;
   letter-spacing: 1px;
 }
 
