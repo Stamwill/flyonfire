@@ -114,7 +114,7 @@ export default function Home({
 
       <main>
         <Hero heroes={heroes} />
-        <About id="about" about={abouts} selfImgs={selfImgs} />
+        <About about={abouts} selfImgs={selfImgs} />
         <Services id="services" services={services} />
         <Testimonials references={testimonials} />
         <Questions questions={questions} />
