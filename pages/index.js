@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import * as React from 'react'
+import PropTypes from 'prop-types'
 import { GraphQLClient } from 'graphql-request'
 import {useGlobal} from '../api/GlobalContext'
 import About from '../blocks/About'
@@ -121,5 +122,14 @@ export default function Home({
 
       <Footer id="footer" footers={footer} />
     </div>
-  )
+  )  
+}
+
+Home.propTypes = {
+  heroes: PropTypes.array,
+  abouts: PropTypes.array,
+  services: PropTypes.array,
+  questions: PropTypes.array,
+  testimonials: PropTypes.array,
+  selfImgs: PropTypes.array
 }
