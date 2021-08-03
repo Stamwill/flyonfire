@@ -22,7 +22,7 @@ const Hamburger = React.forwardRef(function Hamburger(props, ref) {
 
 Hamburger.propTypes = {
   className: PropTypes.string,
-  toggleMenu: PropTypes.bool,
+  toggleMenu: PropTypes.func,
   open: PropTypes.bool,
 }
 
