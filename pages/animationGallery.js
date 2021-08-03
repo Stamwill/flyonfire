@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import * as React from 'react'
+import PropTypes from 'prop-types'
 import { GraphQLClient } from 'graphql-request'
 import { useGlobal } from '../api/GlobalContext'
 import HeroNav from '../blocks/Hero/partials/HeroNav'
@@ -31,7 +32,7 @@ export async function getServerSideProps() {
   }
 }
 
-export default function Home({ videos }) {
+export default function AnimationGallery({ videos }) {
   const [menuIsOpen, setMenuOpen] = React.useState(false)
 
   const toggleMenu = () => {
@@ -65,4 +66,8 @@ export default function Home({ videos }) {
       <Footer id="footer" footers={footer} />
     </div>
   )
+}
+
+AnimationGallery.propTypes = {
+  videos: PropTypes.array
 }
