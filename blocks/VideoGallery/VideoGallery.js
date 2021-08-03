@@ -1,7 +1,7 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'clsx'
-import classes from './videoGallery.module.css'
+import classes from './VideoGallery.module.css'
 
 const VideoGallery = React.forwardRef(function VideoGallery(props, ref) {
   const { className, videos, ...other } = props
@@ -11,6 +11,7 @@ const VideoGallery = React.forwardRef(function VideoGallery(props, ref) {
       {videos.map((video, id) => (
         <div className={classes.videoContainer} key={id}>
           <video className={classes.video} controls>
+            <track default />
             <source src={video.video.url} type="video/mp4" />
           </video>
           <p className={classes.text}>{video.text}</p>
@@ -22,6 +23,7 @@ const VideoGallery = React.forwardRef(function VideoGallery(props, ref) {
 
 VideoGallery.propTypes = {
   className: PropTypes.string,
+  videos: PropTypes.object,
 }
 
 VideoGallery.uiName = 'VideoGallery'
