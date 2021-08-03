@@ -24,8 +24,6 @@ export async function getServerSideProps() {
       ideasTitle
       image {
         url
-        width
-        height
       }
     },
 
@@ -34,13 +32,11 @@ export async function getServerSideProps() {
     },
 
     services {
-      image {
-        url
-        width
-        height
-      }
       serviceTitle
       serviceInfo
+      image {
+        url
+      }
     },
 
     questions {
@@ -49,22 +45,18 @@ export async function getServerSideProps() {
     },
 
     testimonials {
+      person
       reference {
         text
       }
       image {
         url
-        width
-        height
       }
-      person
     },
 
     selfImgs {
       img {
         url
-        width
-        height
       }
     }
   }
@@ -105,6 +97,8 @@ export default function Home({
         <title>FlyonFire Creative</title>
         <meta name="description" content="Graphic and Animation Designer Lee Piechowicz, bringing your ideas to life" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
+        <link rel="preconnect" href="http://localhost:3000/" />
+        <link rel="dns-prefetch" href="http://localhost:3000/" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@700&display=swap"
