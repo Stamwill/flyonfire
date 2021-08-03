@@ -1,8 +1,8 @@
 import * as React from 'react'
 import classnames from 'clsx'
-import classes from './Hamburger.module.css'
-import AppAppBar from '../../containers/AppAppBar'
 import PropTypes from 'prop-types'
+import AppAppBar from '../../containers/AppAppBar'
+import classes from './Hamburger.module.css'
 
 const Hamburger = React.forwardRef(function Hamburger(props, ref) {
   const { className, toggleMenu, open, ...other } = props
@@ -11,9 +11,9 @@ const Hamburger = React.forwardRef(function Hamburger(props, ref) {
     <div className={classnames(classes.root, {[ classes.menuIsOpen ]: open }, className)} ref={ref} {...other}>
       <AppAppBar>
         <div className={classes.container} onClick={toggleMenu}>
-          <div className={classes.barOne}></div>
-          <div className={classes.barTwo}></div>
-          <div className={classes.barThree}></div>
+          <div className={classes.barOne} />
+          <div className={classes.barTwo} />
+          <div className={classes.barThree} />
         </div>
       </AppAppBar>
     </div>
@@ -21,7 +21,9 @@ const Hamburger = React.forwardRef(function Hamburger(props, ref) {
 })
 
 Hamburger.propTypes = {
-  className: PropTypes.string
+  className: PropTypes.string,
+  toggleMenu: PropTypes.bool,
+  open: PropTypes.bool,
 }
 
 export default Hamburger
