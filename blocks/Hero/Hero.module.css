@@ -1,5 +1,5 @@
 .root {
-  height: 90vh;
+  height: 70vh;
   position: relative;
   display: flex;
   justify-content: center;
@@ -26,6 +26,14 @@
   text-align: center;
 }
 
+.mainTitle {
+  font-size: 25px;
+}
+
+.subTitle {
+  font-size: 18px;
+}
+
 .mainHeading,
 .subheading {
   width: 100%;
@@ -38,18 +46,6 @@
   margin: 0;
 }
 
-@media screen and (min-width: 200px) {
-  .mainTitle,
-  .name {
-    font-size: 25px;
-  }
-
-  .subTitle,
-  .ideas {
-    font-size: 10px;
-  }
-}
-
 @media screen and (min-width: 600px) {
   .mainTitle,
   .name {
@@ -59,6 +55,10 @@
   .subTitle,
   .ideas {
     font-size: 15px;
+  }
+
+  .root {
+    height: 90vh;
   }
 }
 
