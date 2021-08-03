@@ -1,5 +1,6 @@
 import * as React from 'react'
 import classnames from 'clsx'
+import PropTypes from 'prop-types'
 import Image from 'next/image'
 import Link from 'next/link'
 import classes from './ProjectGallery.module.css'
@@ -49,4 +50,12 @@ const ProjectGallery = React.forwardRef(function ProjectGallery(props, ref) {
     </div>
   )
 })
+
+ProjectGallery.propTypes = {
+  className: PropTypes.string,
+  projectsAnimations: PropTypes.array, 
+  projectsLogos: PropTypes.array, 
+  galleries: PropTypes.array
+}
+
 export default ProjectGallery
