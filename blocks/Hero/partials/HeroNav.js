@@ -15,7 +15,8 @@ const HeroNav = React.forwardRef(function HeroNav(props, ref) {
         <Image 
           src={logo[0].logo.url}
           rel="preload"
-          layout='fill'
+          height={50}
+          width={60}
           alt='Logo of company'
         />
       </div>
