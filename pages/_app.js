@@ -1,6 +1,8 @@
+import * as React from 'react'
 import '../styles/globals.css'
-import {GlobalProvider} from '../api/GlobalContext'
+import PropTypes from 'prop-types'
 import { GraphQLClient } from 'graphql-request'
+import {GlobalProvider} from '../api/GlobalContext'
 
 const graphcms = new GraphQLClient(process.env.GRAPHQL_URL_ENDPOINT)
 
@@ -55,6 +57,12 @@ MyApp.getInitialProps = async (props) => {
     cmsProps,
     pageProps,
   }
+}
+
+MyApp.propTypes = {
+  cmsProps: PropTypes.object,
+  Component: PropTypes.object,
+  pageProps: PropTypes.object
 }
 
 export default MyApp
