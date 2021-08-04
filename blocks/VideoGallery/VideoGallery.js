@@ -23,7 +23,7 @@ const VideoGallery = React.forwardRef(function VideoGallery(props, ref) {
 
 VideoGallery.propTypes = {
   className: PropTypes.string,
-  videos: PropTypes.object,
+  videos: PropTypes.array,
 }
 
 VideoGallery.uiName = 'VideoGallery'
