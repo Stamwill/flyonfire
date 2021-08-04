@@ -51,23 +51,12 @@
   .name {
     font-size: 35px;
   }
-
-  .subTitle,
-  .ideas {
-    font-size: 15px;
-  }
-
   .root {
     height: 90vh;
   }
 }
 
 @media screen and (min-width: 1000px) {
-  .mainTitle,
-  .name {
-    font-size: 35px;
-  }
-
   .subTitle,
   .ideas {
     font-size: 25px;
