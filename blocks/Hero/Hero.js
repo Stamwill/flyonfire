@@ -16,8 +16,6 @@ const Hero = React.forwardRef(function Hero(props, ref) {
               <Image
                 rel='preload'
                 src={heroes[0].image.url}
-                // height={800}
-                // width={1920}
                 layout='fill'
                 alt="Hero background image"
               />
@@ -39,7 +37,7 @@ const Hero = React.forwardRef(function Hero(props, ref) {
 
 Hero.propTypes = {
   className: PropTypes.string,
-
+  heroes: PropTypes.array,
 }
 
 export default Hero
