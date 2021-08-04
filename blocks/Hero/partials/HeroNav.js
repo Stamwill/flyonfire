@@ -12,13 +12,15 @@ const HeroNav = React.forwardRef(function HeroNav(props, ref) {
   return (
     <div className={classnames(classes.root, className)} ref={ref} {...other}>
       <div className={classes.logo}>
-        <Image 
-          src={logo[0].logo.url}
-          rel="preload"
-          height={50}
-          width={60}
-          alt='Logo of company'
-        />
+        <Link href={logo[0].link}>
+          <Image 
+            src={logo[0].logo.url}
+            rel="preload"
+            height={50}
+            width={60}
+            alt='Logo of company'
+          />
+        </Link>
       </div>
 
       <div className={classes.navBar}>
@@ -34,6 +36,7 @@ const HeroNav = React.forwardRef(function HeroNav(props, ref) {
           </Link>
         ))}
       </div>
+      
       <div className={classes.hamburgerContainer}>
         <Hamburger className={classes.hamburger} open={open} toggleMenu={toggleMenu} />
       </div>
@@ -44,6 +47,9 @@ const HeroNav = React.forwardRef(function HeroNav(props, ref) {
 HeroNav.propTypes = {
   className: PropTypes.string,
   navigations: PropTypes.array,
+  logo: PropTypes.array,
+  open: PropTypes.bool,
+  toggleMenu: PropTypes.func
 }
 
 export default HeroNav
