@@ -32,6 +32,7 @@ MyApp.getInitialProps = async (props) => {
         },
 
         logos {
+          link
           logo {
             url
           }
