@@ -1,8 +1,8 @@
 import * as React from 'react'
 import classnames from 'clsx'
-import classes from './AppDrawer.module.css'
 import Link from 'next/link'
 import PropTypes from 'prop-types'
+import classes from './AppDrawer.module.css'
 
 const AppDrawer = React.forwardRef(function AppDrawer(props, ref) {
   const { className, open, toggleMenu, navigations, ...other } = props
@@ -45,6 +45,9 @@ const AppDrawer = React.forwardRef(function AppDrawer(props, ref) {
 
 AppDrawer.propTypes = {
   className: PropTypes.string,
+  open: PropTypes.bool,
+  toggleMenu: PropTypes.func,
+  navigations: PropTypes.array,
 }
 
 export default AppDrawer
