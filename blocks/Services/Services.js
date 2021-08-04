@@ -1,8 +1,8 @@
 import * as React from 'react'
 import classnames from 'clsx'
 import PropTypes from 'prop-types'
-import Section from '../../components/Section'
 import Image from 'next/image'
+import Section from '../../components/Section'
 import classes from './Services.module.css'
 
 const Services = React.forwardRef(function Services(props, ref) {
@@ -12,7 +12,7 @@ const Services = React.forwardRef(function Services(props, ref) {
     <Section className={classnames(classes.root, className)} ref={ref} {...other}>
       {services.map((service, id) => (
         <div className={classes.card} key={id}>
-          <div className={classes.test}>
+          <div className={classes.imgContainer}>
             <Image 
               src={service.image.url}
               height={100}
