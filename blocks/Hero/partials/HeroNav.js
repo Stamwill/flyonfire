@@ -12,14 +12,16 @@ const HeroNav = React.forwardRef(function HeroNav(props, ref) {
   return (
     <div className={classnames(classes.root, className)} ref={ref} {...other}>
       <div className={classes.logo}>
-        <Link href={logo[0].link}>
-          <Image 
-            src={logo[0].logo.url}
-            rel="preload"
-            height={50}
-            width={60}
-            alt='Logo of company'
-          />
+        <Link href="/" passHref>
+          <a href="/">
+            <Image 
+              src={logo[0].logo.url}
+              rel="preload"
+              height={50}
+              width={60}
+              alt='Logo of company'
+            />
+          </a>
         </Link>
       </div>
 
