@@ -8,7 +8,8 @@ import AppDrawer from '../blocks/Hero/partials/AppDrawer'
 import AppAppBar from '../containers/AppAppBar/AppAppBar'
 import Footer from '../components/Footer'
 import Gallery from '../blocks/Gallery'
-import classes from '../styles/projects.module.css'
+// import classes from '../styles/projects.module.css'
+import classes from '../styles/logoGallery.module.css'
 
 const graphcms = new GraphQLClient(process.env.GRAPHQL_URL_ENDPOINT)
 export async function getServerSideProps() {
