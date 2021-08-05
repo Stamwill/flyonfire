@@ -9,8 +9,8 @@ const Footer = React.forwardRef(function Footer(props, ref) {
   return (
     <footer className={classnames(classes.root, className)} ref={ref} {...other}>
       {footers.map((item, id) => (
-        <div key={id}>
-          <h2 className={classes.title}>{item.title}</h2>
+        <div key={id} >
+            <a className={classes.title} href={item.slug}>{item.title}</a>
         </div>
       ))}
     </footer>
