@@ -13,6 +13,7 @@
 }
 
 .title {
+  display: block;
   margin: 0;
   cursor: pointer;
 }
