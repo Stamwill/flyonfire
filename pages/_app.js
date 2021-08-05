@@ -29,6 +29,7 @@ MyApp.getInitialProps = async (props) => {
 
         footers {
           title
+          slug
         },
 
         logos {
