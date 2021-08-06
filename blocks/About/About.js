@@ -15,7 +15,7 @@ const About = React.forwardRef(function About(props, ref) {
             className={classes.img}
             src={selfImgs[0].img.url}
             width={450}
-            height={600}
+            height={500}
             layout='intrinsic'
             alt="Image of web designer"
           />
