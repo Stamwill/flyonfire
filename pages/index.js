@@ -98,6 +98,7 @@ export default function Home({
         <title>FlyonFire Creative</title>
         <meta name="description" content="Graphic and Animation Designer Lee Piechowicz, bringing your ideas to life" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
+        <link rel="icon" href="/static/favicon.ico" />
         <link rel="preconnect" href="http://localhost:3000/" />
         <link rel="dns-prefetch" href="http://localhost:3000/" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
