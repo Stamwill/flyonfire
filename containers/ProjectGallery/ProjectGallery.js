@@ -25,7 +25,7 @@ const ProjectGallery = React.forwardRef(function ProjectGallery(props, ref) {
           </Link>
 
           <Link href={link.slug} >
-            <a className={classes.link}> {link.text} </a>
+            <a href={link.slug} className={classes.link}> {link.text} </a>
           </Link>
         </div>
       ))}
@@ -43,7 +43,7 @@ const ProjectGallery = React.forwardRef(function ProjectGallery(props, ref) {
           </Link>
 
           <Link href={link.slug} >
-            <a className={classes.link} > {link.text} </a>
+            <a href={link.slug} className={classes.link} > {link.text} </a>
           </Link>
         </div>
       ))}
