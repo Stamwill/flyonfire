@@ -46,6 +46,7 @@ export default function AnimationGallery({ videos }) {
       <Head>
         <title>FlyonFire Creative</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
+        <link rel="icon" href="/static/favicon.ico" />
         <meta name="description" content="Animation Projects for Youtube, Twitch and Professional logos" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
